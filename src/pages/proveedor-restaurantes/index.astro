@@ -1,0 +1,69 @@
+---
+import Site from '../../layouts/Site.astro';
+import Art from '../../components/Art.astro';
+import Steps from '../../components/Steps.astro';
+import Faq from '../../components/Faq.astro';
+import FinalCta from '../../components/FinalCta.astro';
+import { pages } from '../../config/pages';
+const quote = '/cotizar/?origen=restaurantes';
+---
+<Site page="restaurantes" breadcrumbs="restaurantes">
+  <section class="interior-hero">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow">Compras para cocinas profesionales</p>
+        <h1>{pages.restaurantes.h1}</h1>
+        <p class="lead">Una compra empresarial necesita información precisa: productos, cantidades, frecuencia estimada y zonas de atención. Cuéntanos qué requiere tu restaurante o cadena gastronómica en Lima para evaluar una cotización.</p>
+        <div class="actions"><a class="button" href={quote}>Cotizar para mi restaurante <span aria-hidden="true">↗</span></a></div>
+      </div>
+      <div class="art hero-art"><Art type="restaurantes" eager /></div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="wrap section-head flush">
+      <h2>Cuando las compras forman parte de la operación.</h2>
+      <div>
+        <p>Un equipo de compras puede necesitar comparar proveedores y coordinar insumos para distintas preparaciones. Por eso la primera conversación debe comenzar con una lista clara y las características de cada producto.</p>
+        <p>En VEGANFRESH orientamos el contacto comercial a requerimientos mayoristas, no a pedidos de consumo doméstico.</p>
+      </div>
+    </div>
+  </section>
+  <section class="section dark">
+    <div class="wrap split">
+      <h2>Qué datos necesitamos para evaluar tu solicitud.</h2>
+      <Steps items={[
+        ['Productos y variedades.', 'Indica qué frutas y verduras necesitas y las características importantes para tu cocina.'],
+        ['Volumen y frecuencia.', 'Comparte cantidades estimadas y si la necesidad es puntual o recurrente.'],
+        ['Locales y distritos.', 'Si compras para varios establecimientos, señala el número de locales y las zonas. La cobertura se confirmará en la cotización.'],
+      ]} />
+    </div>
+  </section>
+  <section class="section proof">
+    <div class="wrap split">
+      <h2>Experiencia con una cadena de restaurantes en Lima.</h2>
+      <p class="display-text">Actualmente atendemos una relación comercial de suministro mayorista de frutas y verduras con una cadena de restaurantes que opera en diferentes zonas de Lima.</p>
+    </div>
+  </section>
+  <section class="section">
+    <div class="wrap">
+      <h2>De la consulta al acuerdo comercial.</h2>
+      <Steps columns items={[
+        ['Envíanos la lista y el contexto de compra.', ''],
+        ['Detalla las características del requerimiento.', ''],
+        ['Consulta las condiciones comerciales.', ''],
+      ]} />
+      <a class="text-link" href={quote}>Cotizar para mi restaurante <span aria-hidden="true">↗</span></a>
+    </div>
+  </section>
+  <Faq items={[
+    ['¿Puedo consultar por varios restaurantes?', 'Sí. Indica el número de locales y sus distritos para evaluar si es viable atenderlos bajo condiciones acordadas.'],
+    ['¿Necesito un volumen mínimo?', 'Incluye tus cantidades aproximadas; las condiciones comerciales se confirmarán en la evaluación.'],
+    ['¿Puedo pedir frutas y verduras en una sola solicitud?', 'Sí. Puedes preparar una lista mixta indicando cantidades y presentaciones de cada producto.'],
+  ]} />
+  <nav class="wrap related" aria-label="Explorar productos y categorías">
+    <a class="text-link" href="/productos/">Explorar productos <span aria-hidden="true">↗</span></a>
+    <a class="text-link" href={pages.frutas.path}>Consultar frutas <span aria-hidden="true">↗</span></a>
+    <a class="text-link" href={pages.verduras.path}>Consultar verduras <span aria-hidden="true">↗</span></a>
+  </nav>
+  <FinalCta title="Cuéntanos qué necesita tu cocina." label="Solicitar cotización para restaurantes" href={quote} />
+</Site>

@@ -1,0 +1,121 @@
+{
+  "schema": "veganfresh-package-validation-v2",
+  "total": 21,
+  "passed": 21,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "Fuente del logotipo A conservada por SHA256",
+      "status": "PASS",
+      "detail": "8d835e10db36fff72b70dbc0aff7cef5b3592076471c5d32dadbc500cded0303"
+    },
+    {
+      "name": "Archivos fundamentales presentes",
+      "status": "PASS",
+      "detail": "22 requeridos"
+    },
+    {
+      "name": "Todos los documentos docs/ aparecen en índice",
+      "status": "PASS",
+      "detail": "[]"
+    },
+    {
+      "name": "Enlaces Markdown locales",
+      "status": "PASS",
+      "detail": "[]"
+    },
+    {
+      "name": "Existencia rutas en manifests/SPECIFICATION_INDEX.md",
+      "status": "PASS",
+      "detail": "36 rutas; faltantes=[]"
+    },
+    {
+      "name": "Existencia rutas en manifests/PAGE_ASSET_MAPPING.md",
+      "status": "PASS",
+      "detail": "44 rutas; faltantes=[]"
+    },
+    {
+      "name": "Existencia rutas en manifests/ASSET_MANIFEST.md",
+      "status": "PASS",
+      "detail": "31 rutas; faltantes=[]"
+    },
+    {
+      "name": "Integridad visual de assets",
+      "status": "PASS",
+      "detail": "29 archivos: []"
+    },
+    {
+      "name": "Mockups y wireframes de 8 páginas x desktop/mobile",
+      "status": "PASS",
+      "detail": "32 archivos; []"
+    },
+    {
+      "name": "Mockups/HTML referencian exclusivamente logo A y assets reales",
+      "status": "PASS",
+      "detail": "[]"
+    },
+    {
+      "name": "Capturas ejecutadas: assets/overflow @ 1440,390,320",
+      "status": "PASS",
+      "detail": "24 comprobaciones; []"
+    },
+    {
+      "name": "SEO nuevo /productos presente en fuentes P0",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "P1/P2 documentadas pero no mockups ficticios",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "Regla catálogo orientativo y no stock",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "Todas las páginas P0 con captura/manifiesto",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "Sin rutas temporales de sesión en Markdown",
+      "status": "PASS",
+      "detail": "[]"
+    },
+    {
+      "name": "Navegación contiene Productos",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "Contrato logo A vigente",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "Gestor exclusivo pnpm",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "Prompt completo con tests visuales y fase por fase",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "Ausencia del logo B como asset activo",
+      "status": "PASS",
+      "detail": ""
+    }
+  ],
+  "not_executed": [
+    "pnpm install/build (sin acceso registry)",
+    "compatibilidad dependencias transitivas",
+    "API/Cloudflare D1/Turnstile/Resend real",
+    "Lighthouse de sitio final",
+    "QA WCAG final",
+    "despliegue y conectividad real"
+  ]
+}

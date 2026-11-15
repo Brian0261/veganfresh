@@ -1,0 +1,210 @@
+[
+  {
+    "page": "home",
+    "mode": "desktop",
+    "width": 1440,
+    "scroll_width": 1440,
+    "overflow": false,
+    "images_loaded": true,
+    "path": "design/mockups/desktop/home-desktop.png"
+  },
+  {
+    "page": "home",
+    "mode": "mobile",
+    "width": 390,
+    "scroll_width": 390,
+    "overflow": false,
+    "images_loaded": true,
+    "path": "design/mockups/mobile/home-mobile.png"
+  },
+  {
+    "page": "home",
+    "mode": "small",
+    "width": 320,
+    "scroll_width": 320,
+    "overflow": false,
+    "images_loaded": true
+  },
+  {
+    "page": "productos",
+    "mode": "desktop",
+    "width": 1440,
+    "scroll_width": 1440,
+    "overflow": false,
+    "images_loaded": true,
+    "path": "design/mockups/desktop/productos-desktop.png"
+  },
+  {
+    "page": "productos",
+    "mode": "mobile",
+    "width": 390,
+    "scroll_width": 390,
+    "overflow": false,
+    "images_loaded": true,
+    "path": "design/mockups/mobile/productos-mobile.png"
+  },
+  {
+    "page": "productos",
+    "mode": "small",
+    "width": 320,
+    "scroll_width": 320,
+    "overflow": false,
+    "images_loaded": true
+  },
+  {
+    "page": "frutas",
+    "mode": "desktop",
+    "width": 1440,
+    "scroll_width": 1440,
+    "overflow": false,
+    "images_loaded": true,
+    "path": "design/mockups/desktop/frutas-desktop.png"
+  },
+  {
+    "page": "frutas",
+    "mode": "mobile",
+    "width": 390,
+    "scroll_width": 390,
+    "overflow": false,
+    "images_loaded": true,
+    "path": "design/mockups/mobile/frutas-mobile.png"
+  },
+  {
+    "page": "frutas",
+    "mode": "small",
+    "width": 320,
+    "scroll_width": 320,
+    "overflow": false,
+    "images_loaded": true
+  },
+  {
+    "page": "verduras",
+    "mode": "desktop",
+    "width": 1440,
+    "scroll_width": 1440,
+    "overflow": false,
+    "images_loaded": true,
+    "path": "design/mockups/desktop/verduras-desktop.png"
+  },
+  {
+    "page": "verduras",
+    "mode": "mobile",
+    "width": 390,
+    "scroll_width": 390,
+    "overflow": false,
+    "images_loaded": true,
+    "path": "design/mockups/mobile/verduras-mobile.png"
+  },
+  {
+    "page": "verduras",
+    "mode": "small",
+    "width": 320,
+    "scroll_width": 320,
+    "overflow": false,
+    "images_loaded": true
+  },
+  {
+    "page": "restaurantes",
+    "mode": "desktop",
+    "width": 1440,
+    "scroll_width": 1440,
+    "overflow": false,
+    "images_loaded": true,
+    "path": "design/mockups/desktop/restaurantes-desktop.png"
+  },
+  {
+    "page": "restaurantes",
+    "mode": "mobile",
+    "width": 390,
+    "scroll_width": 390,
+    "overflow": false,
+    "images_loaded": true,
+    "path": "design/mockups/mobile/restaurantes-mobile.png"
+  },
+  {
+    "page": "restaurantes",
+    "mode": "small",
+    "width": 320,
+    "scroll_width": 320,
+    "overflow": false,
+    "images_loaded": true
+  },
+  {
+    "page": "cotizar",
+    "mode": "desktop",
+    "width": 1440,
+    "scroll_width": 1440,
+    "overflow": false,
+    "images_loaded": true,
+    "path": "design/mockups/desktop/cotizar-desktop.png"
+  },
+  {
+    "page": "cotizar",
+    "mode": "mobile",
+    "width": 390,
+    "scroll_width": 390,
+    "overflow": false,
+    "images_loaded": true,
+    "path": "design/mockups/mobile/cotizar-mobile.png"
+  },
+  {
+    "page": "cotizar",
+    "mode": "small",
+    "width": 320,
+    "scroll_width": 320,
+    "overflow": false,
+    "images_loaded": true
+  },
+  {
+    "page": "privacidad",
+    "mode": "desktop",
+    "width": 1440,
+    "scroll_width": 1440,
+    "overflow": false,
+    "images_loaded": true,
+    "path": "design/mockups/desktop/privacidad-desktop.png"
+  },
+  {
+    "page": "privacidad",
+    "mode": "mobile",
+    "width": 390,
+    "scroll_width": 390,
+    "overflow": false,
+    "images_loaded": true,
+    "path": "design/mockups/mobile/privacidad-mobile.png"
+  },
+  {
+    "page": "privacidad",
+    "mode": "small",
+    "width": 320,
+    "scroll_width": 320,
+    "overflow": false,
+    "images_loaded": true
+  },
+  {
+    "page": "404",
+    "mode": "desktop",
+    "width": 1440,
+    "scroll_width": 1440,
+    "overflow": false,
+    "images_loaded": true,
+    "path": "design/mockups/desktop/404-desktop.png"
+  },
+  {
+    "page": "404",
+    "mode": "mobile",
+    "width": 390,
+    "scroll_width": 390,
+    "overflow": false,
+    "images_loaded": true,
+    "path": "design/mockups/mobile/404-mobile.png"
+  },
+  {
+    "page": "404",
+    "mode": "small",
+    "width": 320,
+    "scroll_width": 320,
+    "overflow": false,
+    "images_loaded": true
+  }
+]

@@ -1,0 +1,12 @@
+---
+interface Props { items: readonly (readonly [string, string])[]; columns?: boolean }
+const { items, columns = false } = Astro.props;
+---
+<ol class:list={['steps', { 'steps-columns': columns }]} role="list">
+  {items.map(([title, description], index) => (
+    <li>
+      <span class="step-number" aria-hidden="true">{String(index + 1).padStart(2, '0')}</span>
+      <div><h3>{title}</h3>{description && <p>{description}</p>}</div>
+    </li>
+  ))}
+</ol>

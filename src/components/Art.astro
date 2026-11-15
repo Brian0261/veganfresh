@@ -1,0 +1,12 @@
+---
+interface Props { type: 'frutas' | 'verduras' | 'restaurantes'; eager?: boolean }
+const { type, eager = false } = Astro.props;
+const images = {
+  frutas: ['frutas-ilustracion', 'Ilustración de cítricos y frutas con hojas'],
+  verduras: ['verduras-ilustracion', 'Ilustración de hojas verdes y hortalizas de colores'],
+  restaurantes: ['ingredientes-restaurantes-ilustracion', 'Ilustración de ingredientes y una lista de compra'],
+} as const;
+const [file, alt] = images[type];
+---
+<img src={`/assets/images/${file}.svg`} alt={alt} width="1200" height="900"
+  loading={eager ? 'eager' : 'lazy'} fetchpriority={eager ? 'high' : 'auto'} />

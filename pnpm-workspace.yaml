@@ -1,0 +1,12 @@
+allowBuilds:
+  esbuild@0.28.2: true
+  workerd@1.20261110.1: true
+overrides:
+  '@typescript-eslint/typescript-estree>minimatch': 11.0.1
+minimumReleaseAgeExclude:
+  - '@cloudflare/workers-types@5.20261114.1'
+  - '@eslint/config-array@0.23.6'
+  - '@playwright/test@1.65.1'
+  - eslint@10.15.0
+  - playwright-core@1.65.1
+  - playwright@1.65.1

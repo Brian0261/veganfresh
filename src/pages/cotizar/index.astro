@@ -1,0 +1,75 @@
+---
+import Site from '../../layouts/Site.astro';
+import Field from '../../components/Field.astro';
+import { pages } from '../../config/pages';
+import { districts } from '../../config/districts';
+import { releaseReady } from '../../config/release.mjs';
+import { businessTypes, frequencies } from '../../lib/quote';
+
+const siteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY?.trim();
+const demo = import.meta.env.VEGANFRESH_DEMO === '1';
+const live = import.meta.env.VEGANFRESH_RELEASE === '1' && releaseReady && Boolean(siteKey);
+const mode = live ? 'live' : demo ? 'demo' : 'closed';
+---
+<Site page="cotizar">
+  <section class="section">
+    <div class="wrap quote-grid">
+      <div class="quote-intro">
+        <p class="eyebrow">Cotización mayorista</p>
+        <h1>{pages.cotizar.h1}</h1>
+        <p>Este formulario es exclusivamente para empresas y negocios que compran frutas y verduras en volumen. Comparte tu lista y la información necesaria para evaluar tu requerimiento.</p>
+        <p><strong>Atendemos solicitudes de empresas y negocios que compran al por mayor.</strong></p>
+        <a class="text-link" href="/productos/">Volver a productos <span aria-hidden="true">↗</span></a>
+      </div>
+      <form class="quote-form" method="post" action="/api/cotizaciones" data-mode={mode} data-sitekey={live ? siteKey : undefined}>
+        {mode === 'closed' && <p class="notice">La recepción de solicitudes estará disponible cuando se apruebe el aviso de privacidad.</p>}
+        {mode === 'demo' && <p class="notice"><strong>Simulación local.</strong> Usa únicamente datos ficticios. Las solicitudes se guardan en una base de pruebas local.</p>}
+        {mode !== 'closed' && <noscript><p class="notice">Activa JavaScript para completar la verificación y enviar la solicitud.</p></noscript>}
+        <div id="quote-success" role="status" tabindex="-1" hidden></div>
+        <div class="form-error" id="quote-error" role="alert" tabindex="-1" hidden></div>
+        <fieldset id="quote-fields" disabled>
+          <p class="form-note">* Campos obligatorios. <span id="quote-context" hidden></span></p>
+          <section aria-labelledby="company-heading">
+            <h2 id="company-heading">Datos de tu empresa</h2>
+            <div class="form-grid">
+              <Field name="companyName" label="Empresa" placeholder="Nombre de la empresa o negocio" autocomplete="organization" min={2} max={120} required />
+              <Field name="contactName" label="Contacto" placeholder="Nombre y apellido" autocomplete="name" min={2} max={100} required />
+              <Field name="email" label="Correo electrónico" placeholder="nombre@empresa.com" type="email" autocomplete="email" max={254} required />
+              <Field name="phone" label="Teléfono" placeholder="Número de contacto" type="tel" autocomplete="tel" min={7} max={20} required />
+              <Field name="businessType" label="Tipo de negocio" options={businessTypes} required wide />
+            </div>
+          </section>
+          <hr class="form-divider" />
+          <section aria-labelledby="request-heading">
+            <h2 id="request-heading">Tu requerimiento</h2>
+            <div class="form-grid">
+              <Field name="district" label="Distrito de atención" placeholder="Selecciona o escribe el distrito de atención en Lima" min={2} max={60} suggestions={districts} required />
+              <Field name="frequency" label="Frecuencia (opcional)" options={frequencies} />
+              <Field name="productsAndQuantities" label="Productos y cantidades aproximadas" placeholder="Indica productos, variedades, cantidades y unidades aproximadas" type="textarea" min={10} max={2000} required wide />
+              <Field name="locationCount" label="Cantidad de sedes (opcional)" placeholder="Si aplica" type="number" min={1} max={100} />
+              <Field name="comments" label="Comentario (opcional)" placeholder="Detalles útiles para preparar tu cotización" type="textarea" max={1000} wide />
+            </div>
+          </section>
+          <hr class="form-divider" />
+          <p class="form-note">
+            {mode === 'live' ? 'Usaremos tus datos para gestionar esta solicitud y comunicarnos sobre ella. Consulta nuestra ' : 'Consulta el estado del aviso en la '}
+            <a href="/privacidad/">Política de privacidad</a>.
+          </p>
+          <label class="check-label">
+            <input type="checkbox" name="privacyAcknowledged" required aria-describedby="privacyAcknowledged-error" />
+            {mode === 'live' ? 'He leído el aviso de privacidad. *' : 'He leído el aviso de esta vista previa. *'}
+          </label>
+          <p class="field-error" id="privacyAcknowledged-error" hidden></p>
+          <div class="honeypot" aria-hidden="true"><label>Sitio web <input name="website" tabindex="-1" autocomplete="off" /></label></div>
+          <div id="turnstile"></div>
+          <p id="turnstileToken-error" class="field-error" hidden></p>
+          <button class="button" type="submit">Enviar solicitud</button>
+          <p id="quote-progress" class="form-note" role="status"></p>
+        </fieldset>
+      </form>
+    </div>
+  </section>
+</Site>
+<script>
+  import '../../scripts/quote-form';
+</script>

@@ -1,0 +1,32 @@
+---
+import Site from '../../layouts/Site.astro';
+import { pages } from '../../config/pages';
+
+// TODO_LEGAL: sustituir este borrador y versionar la política aprobada.
+const sections = [
+  ['responsable', 'Identidad del responsable', 'La razón social, RUC, domicilio y canal de privacidad están pendientes de confirmación.'],
+  ['datos', 'Datos recopilados', 'El formulario previsto solicita empresa, nombre, datos de contacto y requerimiento de compra.'],
+  ['finalidades', 'Finalidades', 'Atender cotizaciones y gestionar relaciones comerciales vinculadas.'],
+  ['base-legal', 'Base legal y consentimiento', 'La base legal y las condiciones del tratamiento están pendientes de revisión jurídica.'],
+  ['destinatarios', 'Destinatarios y transferencias', 'Está prevista la revisión del alojamiento en Cloudflare y de los avisos transaccionales en Resend.'],
+  ['conservacion', 'Plazos de conservación', 'El criterio y el plazo de conservación están pendientes de aprobación.'],
+  ['derechos', 'Derechos del titular', 'El canal y procedimiento de ejercicio de derechos están pendientes de aprobación.'],
+  ['seguridad', 'Seguridad', 'El formulario de esta vista previa mantiene deshabilitada la recepción de datos personales.'],
+  ['cambios', 'Cambios', 'La política incluirá su versión y fecha de aprobación.'],
+  ['contacto', 'Contacto', 'El canal de privacidad se publicará al aprobar la política.'],
+] as const;
+---
+<Site page="privacidad">
+  <article class="wrap legal">
+    <div class="reading">
+      <p class="eyebrow">Documentos / Privacidad</p>
+      <h1>{pages.privacidad.h1}</h1>
+      <p>Esta sección informará a las personas que envíen solicitudes comerciales sobre el tratamiento de sus datos.</p>
+      <div class="notice"><strong>Documento pendiente de validación jurídica</strong><p>La captación de datos personales está deshabilitada en esta vista previa.</p></div>
+      <nav class="legal-index" aria-label="En esta página">
+        <ul>{sections.map(([id, title]) => <li><a href={`#${id}`}>{title}</a></li>)}</ul>
+      </nav>
+      {sections.map(([id, title, body]) => <section id={id}><h2>{title}</h2><p>{body}</p></section>)}
+    </div>
+  </article>
+</Site>

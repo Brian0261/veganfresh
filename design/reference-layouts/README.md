@@ -1,0 +1,1 @@
+Referencia renderizable, no código de producción. Se usa solo para capturas y comparación visual. Logo **A** original en el header y versión inversa derivada en footer. Las tipografías son fallback; usar las fuentes aprobadas al implementar.

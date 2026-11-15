@@ -1,0 +1,14 @@
+---
+interface Props { title?: string; items: readonly (readonly [string, string])[] }
+const { title = 'Antes de cotizar.', items } = Astro.props;
+---
+<section class="section">
+  <div class="wrap faq-wrap">
+    <h2>{title}</h2>
+    <div class="faq-list">
+      {items.map(([question, answer]) => (
+        <details class="faq"><summary>{question}</summary><p>{answer}</p></details>
+      ))}
+    </div>
+  </div>
+</section>

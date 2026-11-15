@@ -1,0 +1,84 @@
+---
+import Site from '../../layouts/Site.astro';
+import Art from '../../components/Art.astro';
+import Steps from '../../components/Steps.astro';
+import Faq from '../../components/Faq.astro';
+import FinalCta from '../../components/FinalCta.astro';
+import { pages } from '../../config/pages';
+const quote = '/cotizar/?origen=productos';
+const families = [
+  { category: 'frutas', title: 'Frutas', text: 'Ejemplos para consultar: limón, palta, plátano, mango, fresa, naranja, mandarina y papaya. Indica variedad y maduración cuando influya en el uso profesional.', link: 'Ver la categoría de frutas' },
+  { category: 'verduras', title: 'Verduras y hortalizas', text: 'Ejemplos para consultar: tomate, cebolla, lechuga, zanahoria, pimiento y zapallo. Indica si necesitas una variedad específica.', link: 'Ver la categoría de verduras' },
+  { title: 'Raíces, tubérculos y complementos frescos', text: 'Puedes consultar por productos como papa, camote, yuca, ají amarillo o hierbas aromáticas. Describe exactamente el producto y la unidad deseada; las características comerciales se validan en la cotización.' },
+] as const;
+const products = ['Papa', 'Cebolla', 'Tomate', 'Limón', 'Palta', 'Plátano', 'Fresa', 'Mango', 'Lechuga', 'Zanahoria', 'Ají amarillo', 'Hierbas aromáticas'];
+---
+<Site page="productos" breadcrumbs="productos">
+  <section class="interior-hero catalog-hero">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow">Catálogo orientativo · Consultas B2B</p>
+        <h1>{pages.productos.h1}</h1>
+        <p class="lead">Si compras para una empresa en Lima, organiza tu lista de frutas y verduras por productos o familias. Comparte las cantidades, variedades y frecuencia que necesitas para que podamos evaluar tu cotización.</p>
+        <p class="notice">Los productos que se mencionan son ejemplos de consulta. Las variedades, presentaciones, cantidades y disponibilidad se confirman individualmente; esta página no muestra inventario en tiempo real.</p>
+        <div class="actions">
+          <a class="button" href={quote}>Enviar mi lista de productos <span aria-hidden="true">↗</span></a>
+          <a class="text-link" href={pages.frutas.path}>Consultar frutas</a>
+        </div>
+      </div>
+      <div class="art hero-art"><Art type="frutas" eager /></div>
+    </div>
+  </section>
+  <section class="section catalog-families">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Explora por familia.</h2>
+        <p>La agrupación facilita que tu equipo de compras identifique qué necesita cotizar. Una misma solicitud puede combinar productos de distintas familias.</p>
+      </div>
+      <div class="family-list">
+        {families.map(family => (
+          <article class="family-row">
+            <h3>{family.title}</h3>
+            <div><p>{family.text}</p>
+              {'category' in family && <a class="text-link" href={pages[family.category].path}>{family.link} <span aria-hidden="true">↗</span></a>}
+            </div>
+            {'category' in family && <div class="art"><Art type={family.category} /></div>}
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+  <section class="section sage">
+    <div class="wrap">
+      <h2 class="measure">Productos que puedes incluir en tu consulta.</h2>
+      <p class="section-intro">Una selección de nombres habituales en solicitudes de cocina profesional; no representa stock confirmado.</p>
+      <ul class="product-examples" role="list">{products.map(product => <li>{product}</li>)}</ul>
+    </div>
+  </section>
+  <section class="section dark">
+    <div class="wrap split">
+      <h2>Qué detalles ayudan a revisar tu lista.</h2>
+      <Steps items={[
+        ['Nombre y variedad', 'Especifica variedad o características cuando sean importantes para tus preparaciones.'],
+        ['Cantidad y unidad', 'Indica kilos, cajas, atados u otra unidad referencial. No implica una presentación comercial disponible.'],
+        ['Frecuencia y zona', 'Señala si la compra es puntual o recurrente y para qué distritos necesitas evaluar la atención.'],
+        ['Varios locales', 'Si compras para una cadena, indica número de sedes y cualquier requisito particular; la factibilidad se confirmará comercialmente.'],
+      ]} />
+    </div>
+  </section>
+  <section class="section">
+    <div class="wrap split">
+      <h2>Una misma cotización para tu requerimiento.</h2>
+      <div>
+        <p>No necesitas consultar cada producto por separado. Puedes enviar una lista de frutas y verduras en el formulario empresarial y describir los volúmenes que requiere tu operación.</p>
+        <div class="actions"><a class="button" href={quote}>Preparar solicitud mayorista <span aria-hidden="true">↗</span></a></div>
+      </div>
+    </div>
+  </section>
+  <Faq items={[
+    ['¿Este catálogo muestra stock disponible?', 'No. Es una referencia para organizar consultas. Confirmamos comercialmente las variedades, cantidades y condiciones que sean viables.'],
+    ['¿Puedo solicitar productos no mencionados?', 'Sí, describe cualquier fruta o verdura que tu operación necesite. Evaluaremos tu consulta sin asumir disponibilidad permanente.'],
+    ['¿Debo enviar una cotización por producto?', 'No. Puedes enviar un requerimiento combinado con distintos productos y cantidades en un solo formulario.'],
+  ]} />
+  <FinalCta title="Cuéntanos qué necesita comprar tu empresa." href={quote} />
+</Site>

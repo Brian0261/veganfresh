@@ -1,0 +1,55 @@
+---
+import Site from './Site.astro';
+import Art from '../components/Art.astro';
+import Steps from '../components/Steps.astro';
+import Faq from '../components/Faq.astro';
+import FinalCta from '../components/FinalCta.astro';
+import { categories } from '../content/categories';
+import { pages } from '../config/pages';
+interface Props { page: keyof typeof categories }
+const { page } = Astro.props;
+const content = categories[page];
+const href = `/cotizar/?categoria=${page}`;
+const related = page === 'frutas' ? 'verduras' : 'frutas';
+---
+<Site page={page} breadcrumbs={page}>
+  <section class="interior-hero">
+    <div class:list={['wrap', 'hero-grid', { reverse: page === 'verduras' }]}>
+      <div class="hero-copy">
+        <p class="eyebrow">{pages[page].label} · Compras B2B en Lima</p>
+        <h1>{pages[page].h1}</h1>
+        <p class="lead">{content.intro}</p>
+        <div class="actions"><a class="button" href={href}>{content.cta} <span aria-hidden="true">↗</span></a></div>
+      </div>
+      <div class="art hero-art"><Art type={page} eager /></div>
+    </div>
+  </section>
+  <section class="section category-criteria">
+    <div class:list={['wrap', { split: page === 'verduras' }]}>
+      <h2 class="measure">{content.details}</h2>
+      <Steps items={content.criteria} columns={page === 'frutas'} />
+    </div>
+  </section>
+  <section class="section white">
+    <div class="wrap">
+      <h2 class="measure">{content.families}</h2>
+      <p class="section-intro">{content.familiesIntro}</p>
+      <div class="group-grid">
+        {content.groups.map(([title, text]) => <article><h3>{title}</h3><p>{text}</p></article>)}
+      </div>
+      <a class="text-link" href="/productos/">Ver el catálogo orientativo de productos <span aria-hidden="true">↗</span></a>
+    </div>
+  </section>
+  <section class="sage strip-section">
+    <div class="wrap action-strip">
+      <div><h2>{content.request}</h2><p>{content.requestText}</p></div>
+      <a class="button" href={href}>{content.requestCta} <span aria-hidden="true">↗</span></a>
+    </div>
+  </section>
+  <Faq items={content.faq} />
+  <nav class="wrap related" aria-label="Otras consultas mayoristas">
+    <a class="text-link" href={pages[related].path}>Consultar {related} <span aria-hidden="true">↗</span></a>
+    <a class="text-link" href="/proveedor-restaurantes/">Abastecimiento para restaurantes <span aria-hidden="true">↗</span></a>
+  </nav>
+  <FinalCta title={content.final} href={href} />
+</Site>

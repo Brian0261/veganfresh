@@ -1,0 +1,17 @@
+---
+import Site from '../layouts/Site.astro';
+import { pages } from '../config/pages';
+---
+<Site page="missing">
+  <section class="section missing">
+    <div class="wrap">
+      <p class="eyebrow">404 / Página no encontrada</p>
+      <h1>{pages.missing.h1}</h1>
+      <p>El enlace puede haber cambiado o estar incompleto. Puedes volver al inicio o contarnos qué productos necesita tu empresa.</p>
+      <div class="actions">
+        <a class="button" href="/">Volver al inicio <span aria-hidden="true">↗</span></a>
+        <a class="text-link" href="/cotizar/">Solicitar cotización</a>
+      </div>
+    </div>
+  </section>
+</Site>

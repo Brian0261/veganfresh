@@ -1,0 +1,30 @@
+---
+import { pages } from '../config/pages';
+---
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <a class="brand" href="/" aria-label="VEGANFRESH, inicio">
+        <picture>
+          <source srcset="/assets/brand/logo-inverse.webp" type="image/webp" />
+          <img src="/assets/brand/logo-inverse.png" width="1971" height="318" loading="lazy" alt="VEGANFRESH" />
+        </picture>
+      </a>
+      <p>VEGANFRESH. Frutas y verduras al por mayor para empresas de Lima Metropolitana.</p>
+    </div>
+    <nav aria-label="Explorar">
+      <strong>Explorar</strong>
+      <a href="/">Inicio</a>
+      <a href={pages.productos.path}>Productos</a>
+      <a href={pages.frutas.path}>Frutas al por mayor</a>
+      <a href={pages.verduras.path}>Verduras al por mayor</a>
+      <a href={pages.restaurantes.path}>Para restaurantes</a>
+    </nav>
+    <nav aria-label="Contacto comercial y privacidad">
+      <strong>Contacto</strong>
+      <a href={pages.cotizar.path}>Cotizaciones</a>
+      <a href={pages.privacidad.path}>Política de privacidad</a>
+    </nav>
+    <p class="footer-end">Las variedades, condiciones y cobertura se confirman al cotizar.</p>
+  </div>
+</footer>

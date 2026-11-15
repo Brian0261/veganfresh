@@ -1,0 +1,10 @@
+{
+  "extends": "astro/tsconfigs/strict",
+  "include": ["worker/**/*.ts", "src/lib/**/*.ts", "src/config/**/*.mjs"],
+  "compilerOptions": {
+    "allowJs": true,
+    "lib": ["ES2024"],
+    "types": ["@cloudflare/workers-types"],
+    "allowImportingTsExtensions": true
+  }
+}

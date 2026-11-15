@@ -1,0 +1,32 @@
+---
+import type { QuoteField } from '../lib/quote';
+interface Props {
+  name: QuoteField;
+  label: string;
+  type?: 'text' | 'email' | 'tel' | 'number' | 'textarea';
+  placeholder?: string;
+  autocomplete?: string;
+  required?: boolean;
+  min?: number;
+  max?: number;
+  wide?: boolean;
+  options?: Record<string, string>;
+  suggestions?: readonly string[];
+}
+const { name, label, type = 'text', placeholder, autocomplete, required, min, max, wide, options, suggestions } = Astro.props;
+---
+<div class:list={['field', { 'form-wide': wide }]}>
+  <label for={name}>{label}{required && ' *'}</label>
+  {type === 'textarea' ? <textarea id={name} name={name} required={required} minlength={min} maxlength={max} placeholder={placeholder} aria-describedby={`${name}-error`}></textarea>
+    : options ? <select id={name} name={name} required={required} aria-describedby={`${name}-error`}>
+      <option value="">Selecciona una opción</option>
+      {Object.entries(options).map(([value, text]) => <option value={value}>{text}</option>)}
+    </select>
+    : <input id={name} name={name} type={type} required={required} placeholder={placeholder} autocomplete={autocomplete}
+      list={suggestions ? `${name}-suggestions` : undefined}
+      minlength={type !== 'number' ? min : undefined} maxlength={type !== 'number' ? max : undefined}
+      min={type === 'number' ? min : undefined} max={type === 'number' ? max : undefined}
+      aria-describedby={`${name}-error`} />}
+  {suggestions && <datalist id={`${name}-suggestions`}>{suggestions.map(value => <option value={value}></option>)}</datalist>}
+  <p class="field-error" id={`${name}-error`} hidden></p>
+</div>

@@ -1,0 +1,70 @@
+---
+import '@fontsource-variable/dm-sans';
+import '@fontsource-variable/newsreader';
+import '../styles/site.css';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { breadcrumbLabels, pages, type CommercialSubpage, type PageKey } from '../config/pages';
+import { indexablePaths, siteOrigin } from '../config/release.mjs';
+
+interface Props { page: PageKey; breadcrumbs?: CommercialSubpage }
+const { page, breadcrumbs } = Astro.props;
+const { title, description, path } = pages[page];
+const canonical = siteOrigin && page !== 'missing' ? new URL(path, siteOrigin).href : null;
+const indexed = import.meta.env.VEGANFRESH_RELEASE === '1' && indexablePaths.includes(path);
+const schema = canonical && (page === 'home' ? {
+  '@context': 'https://schema.org',
+  '@graph': [
+    { '@type': 'Organization', '@id': canonical + '#organization', name: 'VEGANFRESH', url: canonical, logo: canonical + 'assets/brand/logo-primary.png' },
+    { '@type': 'WebSite', name: 'VEGANFRESH', url: canonical, inLanguage: 'es-PE', publisher: { '@id': canonical + '#organization' } },
+  ],
+} : breadcrumbs ? {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Inicio', item: new URL('/', canonical).href },
+    { '@type': 'ListItem', position: 2, name: breadcrumbLabels[breadcrumbs], item: canonical },
+  ],
+} : null);
+---
+<!doctype html>
+<html lang="es-PE">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="robots" content={indexed ? 'index, follow' : 'noindex, follow'} />
+    <link rel="icon" href="/assets/brand/favicon.ico" sizes="any" />
+    <link rel="icon" href="/assets/brand/favicon-32.png" type="image/png" sizes="32x32" />
+    <link rel="apple-touch-icon" href="/assets/brand/favicon-180.png" />
+    {canonical && <link rel="canonical" href={canonical} />}
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:locale" content="es_PE" />
+    <meta property="og:site_name" content="VEGANFRESH" />
+    <meta property="og:type" content="website" />
+    {canonical && <>
+      <meta property="og:url" content={canonical} />
+      <meta property="og:image" content={new URL('/assets/images/og-veganfresh.png', canonical).href} />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
+      <meta property="og:image:alt" content="VEGANFRESH, frutas y verduras al por mayor" />
+    </>}
+    {schema && <script type="application/ld+json" set:html={JSON.stringify(schema).replace(/</g, '\\u003c')} />}
+    <slot name="head" />
+  </head>
+  <body>
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+    <Header current={page} />
+    <main id="contenido" tabindex="-1">
+      {breadcrumbs && (
+        <nav class="wrap breadcrumb" aria-label="Ruta de navegación">
+          <ol><li><a href="/">Inicio</a></li><li aria-current="page">{breadcrumbLabels[breadcrumbs]}</li></ol>
+        </nav>
+      )}
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>

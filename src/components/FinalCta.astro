@@ -1,0 +1,10 @@
+---
+interface Props { title: string; label?: string; href?: string; text?: string }
+const { title, label = 'Solicitar cotización', href = '/cotizar/', text } = Astro.props;
+---
+<section class="final-cta">
+  <div class="wrap action-strip">
+    <div><h2>{title}</h2>{text && <p>{text}</p>}</div>
+    <a class="button light" href={href}>{label} <span aria-hidden="true">↗</span></a>
+  </div>
+</section>

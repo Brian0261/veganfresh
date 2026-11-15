@@ -1,0 +1,434 @@
+[
+  {
+    "page": "home",
+    "width": 320,
+    "horizontal_overflow": false,
+    "scroll_width": 320,
+    "images_loaded": true,
+    "logo_header": true,
+    "products_nav": true
+  },
+  {
+    "page": "home",
+    "width": 390,
+    "horizontal_overflow": false,
+    "scroll_width": 390,
+    "images_loaded": true,
+    "logo_header": true,
+    "products_nav": true
+  },
+  {
+    "page": "home",
+    "width": 768,
+    "horizontal_overflow": false,
+    "scroll_width": 768,
+    "images_loaded": true,
+    "logo_header": true,
+    "products_nav": true
+  },
+  {
+    "page": "home",
+    "width": 1024,
+    "horizontal_overflow": false,
+    "scroll_width": 1024,
+    "images_loaded": true,
+    "logo_header": true,
+    "products_nav": true
+  },
+  {
+    "page": "home",
+    "width": 1440,
+    "horizontal_overflow": false,
+    "scroll_width": 1440,
+    "images_loaded": true,
+    "logo_header": true,
+    "products_nav": true
+  },
+  {
+    "page": "home",
+    "width": 1920,
+    "horizontal_overflow": false,
+    "scroll_width": 1920,
+    "images_loaded": true,
+    "logo_header": true,
+    "products_nav": true
+  },
+  {
+    "page": "productos",
+    "width": 320,
+    "horizontal_overflow": false,
+    "scroll_width": 320,
+    "images_loaded": true,
+    "logo_header": true,
+    "products_nav": true
+  },
+  {
+    "page": "productos",
+    "width": 390,
+    "horizontal_overflow": false,
+    "scroll_width": 390,
+    "images_loaded": true,
+    "logo_header": true,
+    "products_nav": true
+  },
+  {
+    "page": "productos",
+    "width": 768,
+    "horizontal_overflow": false,
+    "scroll_width": 768,
+    "images_loaded": true,
+    "logo_header": true,
+    "products_nav": true
+  },
+  {
+    "page": "productos",
+    "width": 1024,
+    "horizontal_overflow": false,
+    "scroll_width": 1024,
+    "images_loaded": true,
+    "logo_header": true,
+    "products_nav": true
+  },
+  {
+    "page": "productos",
+    "width": 1440,
+    "horizontal_overflow": false,
+    "scroll_width": 1440,
+    "images_loaded": true,
+    "logo_header": true,
+    "products_nav": true
+  },
+  {
+    "page": "productos",
+    "width": 1920,
+    "horizontal_overflow": false,
+    "scroll_width": 1920,
+    "images_loaded": true,
+    "logo_header": true,
+    "products_nav": true
+  },
+  {
+    "page": "frutas",
+    "width": 320,
+    "horizontal_overflow": false,
+    "scroll_width": 320,
+    "images_loaded": true,
+    "logo_header": true,
+    "products_nav": true
+  },
+  {
+    "page": "frutas",
+    "width": 390,
+    "horizontal_overflow": false,
+    "scroll_width": 390,
+    "images_loaded": true,
+    "logo_header": true,
+    "products_nav": true
+  },
+  {
+    "page": "frutas",
+    "width": 768,
+    "horizontal_overflow": false,
+    "scroll_width": 768,
+    "images_loaded": true,
+    "logo_header": true,
+    "products_nav": true
+  },
+  {
+    "page": "frutas",
+    "width": 1024,
+    "horizontal_overflow": false,
+    "scroll_width": 1024,
+    "images_loaded": true,
+    "logo_header": true,
+    "products_nav": true
+  },
+  {
+    "page": "frutas",
+    "width": 1440,
+    "horizontal_overflow": false,
+    "scroll_width": 1440,
+    "images_loaded": true,
+    "logo_header": true,
+    "products_nav": true
+  },
+  {
+    "page": "frutas",
+    "width": 1920,
+    "horizontal_overflow": false,
+    "scroll_width": 1920,
+    "images_loaded": true,
+    "logo_header": true,
+    "products_nav": true
+  },
+  {
+    "page": "verduras",
+    "width": 320,
+    "horizontal_overflow": false,
+    "scroll_width": 320,
+    "images_loaded": true,
+    "logo_header": true,
+    "products_nav": true
+  },
+  {
+    "page": "verduras",
+    "width": 390,
+    "horizontal_overflow": false,
+    "scroll_width": 390,
+    "images_loaded": true,
+    "logo_header": true,
+    "products_nav": true
+  },
+  {
+    "page": "verduras",
+    "width": 768,
+    "horizontal_overflow": false,
+    "scroll_width": 768,
+    "images_loaded": true,
+    "logo_header": true,
+    "products_nav": true
+  },
+  {
+    "page": "verduras",
+    "width": 1024,
+    "horizontal_overflow": false,
+    "scroll_width": 1024,
+    "images_loaded": true,
+    "logo_header": true,
+    "products_nav": true
+  },
+  {
+    "page": "verduras",
+    "width": 1440,
+    "horizontal_overflow": false,
+    "scroll_width": 1440,
+    "images_loaded": true,
+    "logo_header": true,
+    "products_nav": true
+  },
+  {
+    "page": "verduras",
+    "width": 1920,
+    "horizontal_overflow": false,
+    "scroll_width": 1920,
+    "images_loaded": true,
+    "logo_header": true,
+    "products_nav": true
+  },
+  {
+    "page": "restaurantes",
+    "width": 320,
+    "horizontal_overflow": false,
+    "scroll_width": 320,
+    "images_loaded": true,
+    "logo_header": true,
+    "products_nav": true
+  },
+  {
+    "page": "restaurantes",
+    "width": 390,
+    "horizontal_overflow": false,
+    "scroll_width": 390,
+    "images_loaded": true,
+    "logo_header": true,
+    "products_nav": true
+  },
+  {
+    "page": "restaurantes",
+    "width": 768,
+    "horizontal_overflow": false,
+    "scroll_width": 768,
+    "images_loaded": true,
+    "logo_header": true,
+    "products_nav": true
+  },
+  {
+    "page": "restaurantes",
+    "width": 1024,
+    "horizontal_overflow": false,
+    "scroll_width": 1024,
+    "images_loaded": true,
+    "logo_header": true,
+    "products_nav": true
+  },
+  {
+    "page": "restaurantes",
+    "width": 1440,
+    "horizontal_overflow": false,
+    "scroll_width": 1440,
+    "images_loaded": true,
+    "logo_header": true,
+    "products_nav": true
+  },
+  {
+    "page": "restaurantes",
+    "width": 1920,
+    "horizontal_overflow": false,
+    "scroll_width": 1920,
+    "images_loaded": true,
+    "logo_header": true,
+    "products_nav": true
+  },
+  {
+    "page": "cotizar",
+    "width": 320,
+    "horizontal_overflow": false,
+    "scroll_width": 320,
+    "images_loaded": true,
+    "logo_header": true,
+    "products_nav": true
+  },
+  {
+    "page": "cotizar",
+    "width": 390,
+    "horizontal_overflow": false,
+    "scroll_width": 390,
+    "images_loaded": true,
+    "logo_header": true,
+    "products_nav": true
+  },
+  {
+    "page": "cotizar",
+    "width": 768,
+    "horizontal_overflow": false,
+    "scroll_width": 768,
+    "images_loaded": true,
+    "logo_header": true,
+    "products_nav": true
+  },
+  {
+    "page": "cotizar",
+    "width": 1024,
+    "horizontal_overflow": false,
+    "scroll_width": 1024,
+    "images_loaded": true,
+    "logo_header": true,
+    "products_nav": true
+  },
+  {
+    "page": "cotizar",
+    "width": 1440,
+    "horizontal_overflow": false,
+    "scroll_width": 1440,
+    "images_loaded": true,
+    "logo_header": true,
+    "products_nav": true
+  },
+  {
+    "page": "cotizar",
+    "width": 1920,
+    "horizontal_overflow": false,
+    "scroll_width": 1920,
+    "images_loaded": true,
+    "logo_header": true,
+    "products_nav": true
+  },
+  {
+    "page": "privacidad",
+    "width": 320,
+    "horizontal_overflow": false,
+    "scroll_width": 320,
+    "images_loaded": true,
+    "logo_header": true,
+    "products_nav": true
+  },
+  {
+    "page": "privacidad",
+    "width": 390,
+    "horizontal_overflow": false,
+    "scroll_width": 390,
+    "images_loaded": true,
+    "logo_header": true,
+    "products_nav": true
+  },
+  {
+    "page": "privacidad",
+    "width": 768,
+    "horizontal_overflow": false,
+    "scroll_width": 768,
+    "images_loaded": true,
+    "logo_header": true,
+    "products_nav": true
+  },
+  {
+    "page": "privacidad",
+    "width": 1024,
+    "horizontal_overflow": false,
+    "scroll_width": 1024,
+    "images_loaded": true,
+    "logo_header": true,
+    "products_nav": true
+  },
+  {
+    "page": "privacidad",
+    "width": 1440,
+    "horizontal_overflow": false,
+    "scroll_width": 1440,
+    "images_loaded": true,
+    "logo_header": true,
+    "products_nav": true
+  },
+  {
+    "page": "privacidad",
+    "width": 1920,
+    "horizontal_overflow": false,
+    "scroll_width": 1920,
+    "images_loaded": true,
+    "logo_header": true,
+    "products_nav": true
+  },
+  {
+    "page": "404",
+    "width": 320,
+    "horizontal_overflow": false,
+    "scroll_width": 320,
+    "images_loaded": true,
+    "logo_header": true,
+    "products_nav": true
+  },
+  {
+    "page": "404",
+    "width": 390,
+    "horizontal_overflow": false,
+    "scroll_width": 390,
+    "images_loaded": true,
+    "logo_header": true,
+    "products_nav": true
+  },
+  {
+    "page": "404",
+    "width": 768,
+    "horizontal_overflow": false,
+    "scroll_width": 768,
+    "images_loaded": true,
+    "logo_header": true,
+    "products_nav": true
+  },
+  {
+    "page": "404",
+    "width": 1024,
+    "horizontal_overflow": false,
+    "scroll_width": 1024,
+    "images_loaded": true,
+    "logo_header": true,
+    "products_nav": true
+  },
+  {
+    "page": "404",
+    "width": 1440,
+    "horizontal_overflow": false,
+    "scroll_width": 1440,
+    "images_loaded": true,
+    "logo_header": true,
+    "products_nav": true
+  },
+  {
+    "page": "404",
+    "width": 1920,
+    "horizontal_overflow": false,
+    "scroll_width": 1920,
+    "images_loaded": true,
+    "logo_header": true,
+    "products_nav": true
+  }
+]
