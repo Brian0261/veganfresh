@@ -1,5 +1,7 @@
 # Contrato de fidelidad visual / QA
 
+Para el rediseño del 15 de noviembre se aplica [UPGRADE_VISUAL_QA.md](UPGRADE_VISUAL_QA.md) con los mockups `*-1440.png` y `*-390.png`. Los PNG originales quedan como referencia histórica.
+
 1. Antes de página: leer `manifests/PAGE_ASSET_MAPPING.md`, especificaciones, copy, assets y ambos screenshots.
 2. Renderizar la URL de implementación real a **1440×900** y **390×844** y guardar **capturas full-page**; añadir 320, 768, 1024, 1920.
 3. Comparar visualmente secciones completas, tipografía, logo, recorte de imagen y botones frente a los PNG de `design/mockups/` y las reglas de `PAGE_SPECIFICATIONS.md`.

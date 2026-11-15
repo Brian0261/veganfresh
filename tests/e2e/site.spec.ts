@@ -5,7 +5,7 @@ import { readFile } from 'node:fs/promises';
 import { pages } from '../../src/config/pages';
 import { fixture, skin } from '../fixture';
 
-const widths = [[320, 844], [390, 844], [768, 900], [1024, 900], [1440, 900], [1920, 1080]] as const;
+const widths = [[320, 700], [390, 844], [768, 1024], [1024, 768], [1440, 900], [1920, 1080]] as const;
 
 test('HTML estático, metadata, links, rutas pendientes y cabeceras', async ({ request, browser }) => {
   const descriptors = Object.values(pages);
@@ -106,7 +106,19 @@ for (const [name, path, status] of skin) {
         };
       });
       expect(metrics.scrollWidth, `${name} a ${width}px`).toBeLessThanOrEqual(metrics.viewport);
-      expect(metrics.header).toBe(width >= 1280 ? 88 : width < 768 ? 68 : 76);
+      expect(metrics.header).toBe(width >= 1280 ? 96 : width < 768 ? 70 : 76);
+      const expectedHero: Record<string, string> = {
+        home: 'hero-market', productos: 'ingredients-board', frutas: 'fruits-citrus',
+        verduras: 'vegetables-still', restaurantes: 'ingredients-board',
+      };
+      if (expectedHero[name]) {
+        const hero = page.locator('main img[fetchpriority="high"]');
+        await expect(hero).toHaveCount(1);
+        const selected = width < 768 ? '-mobile.webp' : '.webp';
+        expect(await hero.evaluate(img => (img as HTMLImageElement).currentSrc)).toContain(
+          '/assets/design-upgrade/' + expectedHero[name] + selected,
+        );
+      }
 
       if (width === 390 || width === 1440) {
         await page.screenshot({ path: `qa/captures/${name}-${width}-first-fold.png`, animations: 'disabled' });
@@ -135,8 +147,12 @@ test('teclado, foco, menú móvil, FAQ y movimiento reducido', async ({ page }) 
   await trigger.focus();
   await page.keyboard.press('Space');
   await expect(trigger).toHaveAttribute('aria-expanded', 'true');
-  await page.keyboard.press('Tab');
   await expect(page.locator('#mobile-navigation').getByRole('link', { name: 'Inicio', exact: true })).toBeFocused();
+  await page.keyboard.press('Tab');
+  await expect(page.locator('#mobile-navigation').getByRole('link', { name: 'Productos', exact: true })).toBeFocused();
+  await page.keyboard.press('Shift+Tab');
+  await expect(page.locator('#mobile-navigation').getByRole('link', { name: 'Inicio', exact: true })).toBeFocused();
+  await page.screenshot({ path: 'qa/captures/home-menu-abierto.png' });
   await page.keyboard.press('Escape');
   await expect(trigger).toBeFocused();
   await expect(trigger).toHaveAttribute('aria-expanded', 'false');
@@ -146,6 +162,31 @@ test('teclado, foco, menú móvil, FAQ y movimiento reducido', async ({ page }) 
   await expect(page.locator('.faq').first()).toHaveAttribute('open', '');
   expect(await page.locator('a.button').first().evaluate(link => getComputedStyle(link).transitionDuration)).toBe('0s');
   await page.screenshot({ path: 'qa/captures/home-faq-teclado.png', fullPage: true });
+});
+
+test('rotación y reflujo equivalente a zoom del 200 %', async ({ browser, baseURL }) => {
+  const context = await browser.newContext({ baseURL, viewport: { width: 640, height: 450 }, deviceScaleFactor: 2 });
+  try {
+    const page = await context.newPage();
+    for (const [, path] of skin) {
+      await page.goto(path);
+      await expect(page.locator('main h1')).toBeVisible();
+      expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBeLessThanOrEqual(640);
+    }
+    await page.goto('/cotizar/');
+    await page.setViewportSize({ width: 844, height: 390 });
+    const trigger = page.locator('.mobile-menu summary');
+    await trigger.focus();
+    await page.keyboard.press('Enter');
+    const quote = page.locator('#mobile-navigation').getByRole('link', { name: 'Solicitar cotización' });
+    await quote.focus();
+    await expect(quote).toBeInViewport();
+    await page.keyboard.press('Escape');
+    await expect(trigger).toBeFocused();
+    await expect(page.getByRole('button', { name: 'Enviar solicitud' })).toBeEnabled();
+  } finally {
+    await context.close();
+  }
 });
 
 test('cotizador accesible, validación, limitación, reintento idempotente y confirmación', async ({ page }) => {

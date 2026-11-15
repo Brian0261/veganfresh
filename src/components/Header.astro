@@ -20,7 +20,7 @@ const { current } = Astro.props;
       Solicitar cotización <span aria-hidden="true">↗</span>
     </a>
     <details class="mobile-menu">
-      <summary aria-controls="mobile-navigation">Menú</summary>
+      <summary aria-controls="mobile-navigation">Menú <span class="menu-mark" aria-hidden="true"></span></summary>
       <nav id="mobile-navigation" aria-label="Navegación principal">
         {primaryNavigation.map(key => (
           <a href={pages[key].path} aria-current={current === key ? 'page' : undefined}>{pages[key].label}</a>
@@ -36,9 +36,11 @@ const { current } = Astro.props;
   const menu = document.querySelector<HTMLDetailsElement>('.mobile-menu');
   const trigger = menu?.querySelector('summary');
   if (menu && trigger) {
-    const sync = () => trigger.setAttribute('aria-expanded', String(menu.open));
-    sync();
-    menu.addEventListener('toggle', sync);
+    trigger.setAttribute('aria-expanded', String(menu.open));
+    menu.addEventListener('toggle', () => {
+      trigger.setAttribute('aria-expanded', String(menu.open));
+      if (menu.open && document.activeElement === trigger) menu.querySelector<HTMLAnchorElement>('nav a')?.focus();
+    });
     document.addEventListener('keydown', event => {
       if (event.key === 'Escape' && menu.open && menu.contains(document.activeElement)) {
         menu.open = false;

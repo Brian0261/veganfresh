@@ -1,6 +1,8 @@
 ---
 import Site from '../../layouts/Site.astro';
 import Field from '../../components/Field.astro';
+import EditorialPhoto from '../../components/EditorialPhoto.astro';
+import EditorialTitle from '../../components/EditorialTitle.astro';
 import { pages } from '../../config/pages';
 import { districts } from '../../config/districts';
 import { releaseReady } from '../../config/release.mjs';
@@ -12,14 +14,20 @@ const live = import.meta.env.VEGANFRESH_RELEASE === '1' && releaseReady && Boole
 const mode = live ? 'live' : demo ? 'demo' : 'closed';
 ---
 <Site page="cotizar">
-  <section class="section">
+  <section class="section quote-section">
     <div class="wrap quote-grid">
       <div class="quote-intro">
         <p class="eyebrow">Cotización mayorista</p>
-        <h1>{pages.cotizar.h1}</h1>
+        <EditorialTitle title={pages.cotizar.h1} emphasis="mayorista." />
         <p>Este formulario es exclusivamente para empresas y negocios que compran frutas y verduras en volumen. Comparte tu lista y la información necesaria para evaluar tu requerimiento.</p>
         <p><strong>Atendemos solicitudes de empresas y negocios que compran al por mayor.</strong></p>
+        <ol class="quote-preparation">
+          <li>Identifica tu empresa y el responsable de la compra.</li>
+          <li>Indica los productos, las variedades y las cantidades.</li>
+          <li>Señala el distrito de atención y, si aplica, el número de sedes.</li>
+        </ol>
         <a class="text-link" href="/productos/">Volver a productos <span aria-hidden="true">↗</span></a>
+        <div class="quote-photo"><EditorialPhoto name="greens-texture" sizes="(min-width: 1440px) 520px, 42vw" decorative /></div>
       </div>
       <form class="quote-form" method="post" action="/api/cotizaciones" data-mode={mode} data-sitekey={live ? siteKey : undefined}>
         {mode === 'closed' && <p class="notice">La recepción de solicitudes estará disponible cuando se apruebe el aviso de privacidad.</p>}

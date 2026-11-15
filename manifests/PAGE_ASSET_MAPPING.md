@@ -1,5 +1,7 @@
 # Mapa exacto de URL P0 → especificación → mockups → activos
 
+Consultar [PAGE_ASSET_MAP.csv](PAGE_ASSET_MAP.csv) para los recursos editoriales vigentes. Las referencias iniciales quedan en este documento como historial.
+
 Todos los enlaces siguientes son rutas relativas a la raíz `veganfresh/`. Los PNG son **mockups aprobables, no capturas de una web de producción**; el contenido SEO sigue siendo la fuente de verdad incluso si un texto de la captura está abreviado por escala.
 
 | Ruta P0 | Layout/SEO/Copy | Desktop 1440 | Móvil 390 | Wireframes | ID activos | CTA |

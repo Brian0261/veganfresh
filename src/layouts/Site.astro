@@ -1,6 +1,7 @@
 ---
 import '@fontsource-variable/dm-sans';
 import '@fontsource-variable/newsreader';
+import '@fontsource-variable/newsreader/wght-italic.css';
 import '../styles/site.css';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
@@ -59,9 +60,11 @@ const schema = canonical && (page === 'home' ? {
     <Header current={page} />
     <main id="contenido" tabindex="-1">
       {breadcrumbs && (
-        <nav class="wrap breadcrumb" aria-label="Ruta de navegación">
-          <ol><li><a href="/">Inicio</a></li><li aria-current="page">{breadcrumbLabels[breadcrumbs]}</li></ol>
-        </nav>
+        <div class:list={['breadcrumb-band', { dark: page === 'verduras' || page === 'restaurantes' }]}>
+          <nav class="wrap breadcrumb" aria-label="Ruta de navegación">
+            <ol><li><a href="/">Inicio</a></li><li aria-current="page">{breadcrumbLabels[breadcrumbs]}</li></ol>
+          </nav>
+        </div>
       )}
       <slot />
     </main>

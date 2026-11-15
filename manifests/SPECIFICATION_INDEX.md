@@ -6,8 +6,8 @@
 | Invariantes | `AGENTS.md` |
 | Producto, negocio, alcance, ADR | `docs/00-project/PRODUCT_BRIEF.md`, `docs/00-project/PROJECT_SCOPE.md`, `docs/00-project/DECISION_LOG.md` |
 | Identidad, logo A, tokens | `docs/01-brand/BRAND_GUIDELINES.md`, `docs/01-brand/LOGO_USAGE.md`, `docs/01-brand/DESIGN_TOKENS.md` |
-| Layout y composición P0 | `docs/02-design/PAGE_SPECIFICATIONS.md`, `docs/02-design/DESIGN_SYSTEM.md` |
-| Responsive, interacciones, QA | `docs/02-design/RESPONSIVE_RULES.md`, `docs/02-design/INTERACTIONS.md`, `docs/02-design/VISUAL_QA.md` |
+| Layout y composición P0 | `docs/02-design/UPGRADE_PAGE_SPECIFICATIONS.md`, `docs/02-design/UPGRADE_DESIGN_SYSTEM.md` |
+| Responsive, interacciones, QA | `docs/02-design/UPGRADE_RESPONSIVE.md`, `docs/02-design/UPGRADE_MOTION.md`, `docs/02-design/UPGRADE_VISUAL_QA.md`, `DESIGN_IMPLEMENTATION_REPORT.md` |
 | Investigación tecnología previa | `docs/00-project/TECHNOLOGY_RESEARCH.md` |
 | Plantilla de continuidad de fases | `docs/06-codex/IMPLEMENTATION_STATUS_TEMPLATE.md` |
 | Estrategia SEO actual | `docs/03-seo/SEO_STRATEGY.md` |

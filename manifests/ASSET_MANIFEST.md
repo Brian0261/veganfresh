@@ -1,5 +1,7 @@
 # Inventario de activos comprobados
 
+El uso de los recortes editoriales de esta actualización está documentado en [PAGE_ASSET_MAP.csv](PAGE_ASSET_MAP.csv), [ASSET_PROVENANCE.md](ASSET_PROVENANCE.md) y [ASSET_INTEGRITY.json](ASSET_INTEGRITY.json).
+
 **Ruta base de producción:** `public/assets/`. **Logo aprobado:** primer diseño A. Todos los recursos proceden del ZIP original, salvo derivados técnicos del logotipo A. No se autoriza ninguna fotografía sintética como evidencia de operaciones.
 
 | Archivo | Tipo/procedencia | Descripción/precauciones |

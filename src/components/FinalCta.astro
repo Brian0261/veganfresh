@@ -4,7 +4,10 @@ const { title, label = 'Solicitar cotización', href = '/cotizar/', text } = Ast
 ---
 <section class="final-cta">
   <div class="wrap action-strip">
-    <div><h2>{title}</h2>{text && <p>{text}</p>}</div>
-    <a class="button light" href={href}>{label} <span aria-hidden="true">↗</span></a>
+    <h2>{title}</h2>
+    <div class="final-action">
+      {text && <p>{text}</p>}
+      <a class="button light" href={href}>{label} <span aria-hidden="true">↗</span></a>
+    </div>
   </div>
 </section>

@@ -1,0 +1,482 @@
+[
+  {
+    "page": "404",
+    "width": 320,
+    "htmlWidth": 320,
+    "viewport": 320,
+    "broken": [],
+    "h1": 1,
+    "height": 1680,
+    "pass": true
+  },
+  {
+    "page": "404",
+    "width": 390,
+    "htmlWidth": 390,
+    "viewport": 390,
+    "broken": [],
+    "h1": 1,
+    "height": 1655,
+    "pass": true
+  },
+  {
+    "page": "404",
+    "width": 768,
+    "htmlWidth": 768,
+    "viewport": 768,
+    "broken": [],
+    "h1": 1,
+    "height": 1290,
+    "pass": true
+  },
+  {
+    "page": "404",
+    "width": 1024,
+    "htmlWidth": 1024,
+    "viewport": 1024,
+    "broken": [],
+    "h1": 1,
+    "height": 1310,
+    "pass": true
+  },
+  {
+    "page": "404",
+    "width": 1440,
+    "htmlWidth": 1440,
+    "viewport": 1440,
+    "broken": [],
+    "h1": 1,
+    "height": 1310,
+    "pass": true
+  },
+  {
+    "page": "404",
+    "width": 1920,
+    "htmlWidth": 1920,
+    "viewport": 1920,
+    "broken": [],
+    "h1": 1,
+    "height": 1310,
+    "pass": true
+  },
+  {
+    "page": "cotizar",
+    "width": 320,
+    "htmlWidth": 320,
+    "viewport": 320,
+    "broken": [],
+    "h1": 1,
+    "height": 3396,
+    "pass": true
+  },
+  {
+    "page": "cotizar",
+    "width": 390,
+    "htmlWidth": 390,
+    "viewport": 390,
+    "broken": [],
+    "h1": 1,
+    "height": 3331,
+    "pass": true
+  },
+  {
+    "page": "cotizar",
+    "width": 768,
+    "htmlWidth": 768,
+    "viewport": 768,
+    "broken": [],
+    "h1": 1,
+    "height": 3093,
+    "pass": true
+  },
+  {
+    "page": "cotizar",
+    "width": 1024,
+    "htmlWidth": 1024,
+    "viewport": 1024,
+    "broken": [],
+    "h1": 1,
+    "height": 2989,
+    "pass": true
+  },
+  {
+    "page": "cotizar",
+    "width": 1440,
+    "htmlWidth": 1440,
+    "viewport": 1440,
+    "broken": [],
+    "h1": 1,
+    "height": 3026,
+    "pass": true
+  },
+  {
+    "page": "cotizar",
+    "width": 1920,
+    "htmlWidth": 1920,
+    "viewport": 1920,
+    "broken": [],
+    "h1": 1,
+    "height": 3039,
+    "pass": true
+  },
+  {
+    "page": "frutas",
+    "width": 320,
+    "htmlWidth": 320,
+    "viewport": 320,
+    "broken": [],
+    "h1": 1,
+    "height": 3913,
+    "pass": true
+  },
+  {
+    "page": "frutas",
+    "width": 390,
+    "htmlWidth": 390,
+    "viewport": 390,
+    "broken": [],
+    "h1": 1,
+    "height": 3782,
+    "pass": true
+  },
+  {
+    "page": "frutas",
+    "width": 768,
+    "htmlWidth": 768,
+    "viewport": 768,
+    "broken": [],
+    "h1": 1,
+    "height": 3133,
+    "pass": true
+  },
+  {
+    "page": "frutas",
+    "width": 1024,
+    "htmlWidth": 1024,
+    "viewport": 1024,
+    "broken": [],
+    "h1": 1,
+    "height": 3320,
+    "pass": true
+  },
+  {
+    "page": "frutas",
+    "width": 1440,
+    "htmlWidth": 1440,
+    "viewport": 1440,
+    "broken": [],
+    "h1": 1,
+    "height": 3319,
+    "pass": true
+  },
+  {
+    "page": "frutas",
+    "width": 1920,
+    "htmlWidth": 1920,
+    "viewport": 1920,
+    "broken": [],
+    "h1": 1,
+    "height": 3328,
+    "pass": true
+  },
+  {
+    "page": "home",
+    "width": 320,
+    "htmlWidth": 320,
+    "viewport": 320,
+    "broken": [],
+    "h1": 1,
+    "height": 6315,
+    "pass": true
+  },
+  {
+    "page": "home",
+    "width": 390,
+    "htmlWidth": 390,
+    "viewport": 390,
+    "broken": [],
+    "h1": 1,
+    "height": 6067,
+    "pass": true
+  },
+  {
+    "page": "home",
+    "width": 768,
+    "htmlWidth": 768,
+    "viewport": 768,
+    "broken": [],
+    "h1": 1,
+    "height": 5090,
+    "pass": true
+  },
+  {
+    "page": "home",
+    "width": 1024,
+    "htmlWidth": 1024,
+    "viewport": 1024,
+    "broken": [],
+    "h1": 1,
+    "height": 5339,
+    "pass": true
+  },
+  {
+    "page": "home",
+    "width": 1440,
+    "htmlWidth": 1440,
+    "viewport": 1440,
+    "broken": [],
+    "h1": 1,
+    "height": 5439,
+    "pass": true
+  },
+  {
+    "page": "home",
+    "width": 1920,
+    "htmlWidth": 1920,
+    "viewport": 1920,
+    "broken": [],
+    "h1": 1,
+    "height": 5472,
+    "pass": true
+  },
+  {
+    "page": "privacidad",
+    "width": 320,
+    "htmlWidth": 320,
+    "viewport": 320,
+    "broken": [],
+    "h1": 1,
+    "height": 2894,
+    "pass": true
+  },
+  {
+    "page": "privacidad",
+    "width": 390,
+    "htmlWidth": 390,
+    "viewport": 390,
+    "broken": [],
+    "h1": 1,
+    "height": 2680,
+    "pass": true
+  },
+  {
+    "page": "privacidad",
+    "width": 768,
+    "htmlWidth": 768,
+    "viewport": 768,
+    "broken": [],
+    "h1": 1,
+    "height": 2782,
+    "pass": true
+  },
+  {
+    "page": "privacidad",
+    "width": 1024,
+    "htmlWidth": 1024,
+    "viewport": 1024,
+    "broken": [],
+    "h1": 1,
+    "height": 2734,
+    "pass": true
+  },
+  {
+    "page": "privacidad",
+    "width": 1440,
+    "htmlWidth": 1440,
+    "viewport": 1440,
+    "broken": [],
+    "h1": 1,
+    "height": 2586,
+    "pass": true
+  },
+  {
+    "page": "privacidad",
+    "width": 1920,
+    "htmlWidth": 1920,
+    "viewport": 1920,
+    "broken": [],
+    "h1": 1,
+    "height": 2586,
+    "pass": true
+  },
+  {
+    "page": "productos",
+    "width": 320,
+    "htmlWidth": 320,
+    "viewport": 320,
+    "broken": [],
+    "h1": 1,
+    "height": 5962,
+    "pass": true
+  },
+  {
+    "page": "productos",
+    "width": 390,
+    "htmlWidth": 390,
+    "viewport": 390,
+    "broken": [],
+    "h1": 1,
+    "height": 5693,
+    "pass": true
+  },
+  {
+    "page": "productos",
+    "width": 768,
+    "htmlWidth": 768,
+    "viewport": 768,
+    "broken": [],
+    "h1": 1,
+    "height": 5202,
+    "pass": true
+  },
+  {
+    "page": "productos",
+    "width": 1024,
+    "htmlWidth": 1024,
+    "viewport": 1024,
+    "broken": [],
+    "h1": 1,
+    "height": 5168,
+    "pass": true
+  },
+  {
+    "page": "productos",
+    "width": 1440,
+    "htmlWidth": 1440,
+    "viewport": 1440,
+    "broken": [],
+    "h1": 1,
+    "height": 5189,
+    "pass": true
+  },
+  {
+    "page": "productos",
+    "width": 1920,
+    "htmlWidth": 1920,
+    "viewport": 1920,
+    "broken": [],
+    "h1": 1,
+    "height": 5203,
+    "pass": true
+  },
+  {
+    "page": "restaurantes",
+    "width": 320,
+    "htmlWidth": 320,
+    "viewport": 320,
+    "broken": [],
+    "h1": 1,
+    "height": 4430,
+    "pass": true
+  },
+  {
+    "page": "restaurantes",
+    "width": 390,
+    "htmlWidth": 390,
+    "viewport": 390,
+    "broken": [],
+    "h1": 1,
+    "height": 4245,
+    "pass": true
+  },
+  {
+    "page": "restaurantes",
+    "width": 768,
+    "htmlWidth": 768,
+    "viewport": 768,
+    "broken": [],
+    "h1": 1,
+    "height": 3322,
+    "pass": true
+  },
+  {
+    "page": "restaurantes",
+    "width": 1024,
+    "htmlWidth": 1024,
+    "viewport": 1024,
+    "broken": [],
+    "h1": 1,
+    "height": 3449,
+    "pass": true
+  },
+  {
+    "page": "restaurantes",
+    "width": 1440,
+    "htmlWidth": 1440,
+    "viewport": 1440,
+    "broken": [],
+    "h1": 1,
+    "height": 3576,
+    "pass": true
+  },
+  {
+    "page": "restaurantes",
+    "width": 1920,
+    "htmlWidth": 1920,
+    "viewport": 1920,
+    "broken": [],
+    "h1": 1,
+    "height": 3608,
+    "pass": true
+  },
+  {
+    "page": "verduras",
+    "width": 320,
+    "htmlWidth": 320,
+    "viewport": 320,
+    "broken": [],
+    "h1": 1,
+    "height": 4043,
+    "pass": true
+  },
+  {
+    "page": "verduras",
+    "width": 390,
+    "htmlWidth": 390,
+    "viewport": 390,
+    "broken": [],
+    "h1": 1,
+    "height": 3968,
+    "pass": true
+  },
+  {
+    "page": "verduras",
+    "width": 768,
+    "htmlWidth": 768,
+    "viewport": 768,
+    "broken": [],
+    "h1": 1,
+    "height": 3629,
+    "pass": true
+  },
+  {
+    "page": "verduras",
+    "width": 1024,
+    "htmlWidth": 1024,
+    "viewport": 1024,
+    "broken": [],
+    "h1": 1,
+    "height": 3782,
+    "pass": true
+  },
+  {
+    "page": "verduras",
+    "width": 1440,
+    "htmlWidth": 1440,
+    "viewport": 1440,
+    "broken": [],
+    "h1": 1,
+    "height": 3842,
+    "pass": true
+  },
+  {
+    "page": "verduras",
+    "width": 1920,
+    "htmlWidth": 1920,
+    "viewport": 1920,
+    "broken": [],
+    "h1": 1,
+    "height": 3856,
+    "pass": true
+  }
+]

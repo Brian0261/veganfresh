@@ -1,0 +1,104 @@
+[
+  {
+    "file": "public/assets/design-upgrade/editorial-process.svg",
+    "bytes": 1238,
+    "sha256": "86f502bd1cc87cb15c09de42d95c01cd108a237f9fe918e7fa90e8982217a1f3",
+    "source": "original SVG diagram"
+  },
+  {
+    "file": "public/assets/design-upgrade/fruits-citrus-mobile.webp",
+    "bytes": 89578,
+    "sha256": "d85be389849ed46549716678c1b65a1d0eb5e3f2138438eedce548a0cde34c20",
+    "source": "synthetic project photo/crop"
+  },
+  {
+    "file": "public/assets/design-upgrade/fruits-citrus.webp",
+    "bytes": 116630,
+    "sha256": "c279f96be73721ed844ac8ef4374dba650b195395b8de58e0c2244ddb2a72311",
+    "source": "synthetic project photo/crop"
+  },
+  {
+    "file": "public/assets/design-upgrade/greens-texture-mobile.webp",
+    "bytes": 85938,
+    "sha256": "407d1df394f061d3f808d7d646b60ab300662e051554eea9d0541b96c6da6839",
+    "source": "synthetic project photo/crop"
+  },
+  {
+    "file": "public/assets/design-upgrade/greens-texture.webp",
+    "bytes": 132290,
+    "sha256": "1957e49ed87885f61520f8b1aa253898762ce152afd2dcd593331725ca81757d",
+    "source": "synthetic project photo/crop"
+  },
+  {
+    "file": "public/assets/design-upgrade/hero-market-mobile.webp",
+    "bytes": 115734,
+    "sha256": "23b16c8bfbfddcb107adeb595a42f1dfeb785f08d71d6abbc848fc1c6eece410",
+    "source": "synthetic project photo/crop"
+  },
+  {
+    "file": "public/assets/design-upgrade/hero-market.webp",
+    "bytes": 225906,
+    "sha256": "4544680e955c8ba09ef424afc320f4381694bbd0ae1e35ce228ab88ee5cb3599",
+    "source": "synthetic project photo/crop"
+  },
+  {
+    "file": "public/assets/design-upgrade/ingredients-board-mobile.webp",
+    "bytes": 104470,
+    "sha256": "1b85bcd585e844635ece5ffa6c1fca414faeab69a2bd27b051e0c8d162a7a8b3",
+    "source": "synthetic project photo/crop"
+  },
+  {
+    "file": "public/assets/design-upgrade/ingredients-board.webp",
+    "bytes": 165688,
+    "sha256": "32744cce5dc53e713e9c18ae2d13da18195afc23d5c16520c94b060f12025d54",
+    "source": "synthetic project photo/crop"
+  },
+  {
+    "file": "public/assets/design-upgrade/leaf-detail-mobile.webp",
+    "bytes": 79288,
+    "sha256": "dc274e45f95498205a5edd20c17e403cd06f5043e0dbd8874826e3a15a6000fb",
+    "source": "synthetic project photo/crop"
+  },
+  {
+    "file": "public/assets/design-upgrade/leaf-detail.webp",
+    "bytes": 94352,
+    "sha256": "f3015e11d6d2e2f5786fa02ee3ade9937e24815656231ddaa5fe448c66568b67",
+    "source": "synthetic project photo/crop"
+  },
+  {
+    "file": "public/assets/design-upgrade/root-detail-mobile.webp",
+    "bytes": 83814,
+    "sha256": "f56c9c673ac7e4a0382f3feab75f90b497dd7a8f8138b8f127d6bdbb3f2ecb3d",
+    "source": "synthetic project photo/crop"
+  },
+  {
+    "file": "public/assets/design-upgrade/root-detail.webp",
+    "bytes": 133994,
+    "sha256": "46d3a35e0ee1b6d6ecd25ae26c8b0749106a579ee12aa976f25800f7147aa445",
+    "source": "synthetic project photo/crop"
+  },
+  {
+    "file": "public/assets/design-upgrade/tomato-detail-mobile.webp",
+    "bytes": 82700,
+    "sha256": "6c1d80b70da2e7c65c9f0b912c4f87e2e4bff4d3aa8920b86a8681022310c29f",
+    "source": "synthetic project photo/crop"
+  },
+  {
+    "file": "public/assets/design-upgrade/tomato-detail.webp",
+    "bytes": 115270,
+    "sha256": "7b376e222df5001a02afeef3b7354e11a36aaf66c456118473cb29b7521beec1",
+    "source": "synthetic project photo/crop"
+  },
+  {
+    "file": "public/assets/design-upgrade/vegetables-still-mobile.webp",
+    "bytes": 92040,
+    "sha256": "6e0c1da85ffdf1042aafb3f89ebda3e1043c7c2b0b817b6ec93357a9c18a3aa7",
+    "source": "synthetic project photo/crop"
+  },
+  {
+    "file": "public/assets/design-upgrade/vegetables-still.webp",
+    "bytes": 159798,
+    "sha256": "cfd71647e721bd824925025d76f2fcab3336a180ea6cdc05d68af1c61fdd3d1c",
+    "source": "synthetic project photo/crop"
+  }
+]

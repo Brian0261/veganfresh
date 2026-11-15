@@ -1,0 +1,7 @@
+---
+interface Props { title: string; emphasis: string; opening?: string }
+const { title, emphasis, opening } = Astro.props;
+const start = title.endsWith(emphasis) ? title.slice(0, -emphasis.length) : title;
+const firstLine = opening && start.startsWith(opening + ' ') ? opening + ' ' : '';
+---
+<h1>{firstLine && <span class="title-line">{firstLine}</span>}{start.slice(firstLine.length)}{start !== title && <em>{emphasis}</em>}</h1>

@@ -1,6 +1,7 @@
 ---
 import Site from '../../layouts/Site.astro';
-import Art from '../../components/Art.astro';
+import EditorialPhoto from '../../components/EditorialPhoto.astro';
+import EditorialTitle from '../../components/EditorialTitle.astro';
 import Steps from '../../components/Steps.astro';
 import Faq from '../../components/Faq.astro';
 import FinalCta from '../../components/FinalCta.astro';
@@ -8,15 +9,18 @@ import { pages } from '../../config/pages';
 const quote = '/cotizar/?origen=restaurantes';
 ---
 <Site page="restaurantes" breadcrumbs="restaurantes">
-  <section class="interior-hero">
-    <div class="wrap hero-grid">
-      <div class="hero-copy">
-        <p class="eyebrow">Compras para cocinas profesionales</p>
-        <h1>{pages.restaurantes.h1}</h1>
-        <p class="lead">Una compra empresarial necesita información precisa: productos, cantidades, frecuencia estimada y zonas de atención. Cuéntanos qué requiere tu restaurante o cadena gastronómica en Lima para evaluar una cotización.</p>
-        <div class="actions"><a class="button" href={quote}>Cotizar para mi restaurante <span aria-hidden="true">↗</span></a></div>
+  <section class="restaurant-hero dark">
+    <div class="wrap">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Compras para cocinas profesionales</p>
+          <EditorialTitle title={pages.restaurantes.h1} emphasis="restaurantes." />
+          <p class="lead">Una compra empresarial necesita información precisa: productos, cantidades, frecuencia estimada y zonas de atención. Cuéntanos qué requiere tu restaurante o cadena gastronómica en Lima para evaluar una cotización.</p>
+          <div class="actions"><a class="button light" href={quote}>Cotizar para mi restaurante <span aria-hidden="true">↗</span></a></div>
+        </div>
+        <div class="restaurant-portrait"><EditorialPhoto name="ingredients-board" sizes="(min-width: 1440px) 605px, 45vw" eager /></div>
       </div>
-      <div class="art hero-art"><Art type="restaurantes" eager /></div>
+      <p class="photo-caption">Insumos para cocinas profesionales</p>
     </div>
   </section>
   <section class="section">
@@ -28,10 +32,10 @@ const quote = '/cotizar/?origen=restaurantes';
       </div>
     </div>
   </section>
-  <section class="section dark">
-    <div class="wrap split">
+  <section class="section sage restaurant-requirements">
+    <div class="wrap">
       <h2>Qué datos necesitamos para evaluar tu solicitud.</h2>
-      <Steps items={[
+      <Steps editorial items={[
         ['Productos y variedades.', 'Indica qué frutas y verduras necesitas y las características importantes para tu cocina.'],
         ['Volumen y frecuencia.', 'Comparte cantidades estimadas y si la necesidad es puntual o recurrente.'],
         ['Locales y distritos.', 'Si compras para varios establecimientos, señala el número de locales y las zonas. La cobertura se confirmará en la cotización.'],

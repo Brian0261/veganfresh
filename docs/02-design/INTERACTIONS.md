@@ -1,5 +1,7 @@
 # Interacciones B2B y comportamiento visual
 
+Las transiciones permitidas en el rediseño se detallan en [UPGRADE_MOTION.md](UPGRADE_MOTION.md).
+
 - Nav: foco visible; menú móvil con `aria-expanded`, cerrar con Escape, click outside si compatible, mantener foco coherente al cerrar. No enlaces a secciones no implementadas.
 - Botones primarios: transición background-color 140–180ms `ease-out`, sin rebote. Disabled: no enviar y texto de estado. `:active`: cambio de color sin desplazamiento >1px.
 - FAQ: `<details>` accesible, Enter/Espacio nativo; si animar, solo opacidad/transición breve y respetar `prefers-reduced-motion`.

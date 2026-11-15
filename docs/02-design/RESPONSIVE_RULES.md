@@ -1,5 +1,7 @@
 # Responsive / medidas observables
 
+Los tamaños de cabecera, contenedor y alturas de imagen vigentes se detallan en [UPGRADE_RESPONSIVE.md](UPGRADE_RESPONSIVE.md).
+
 | Ancho | Contenedor y gutters | Cabecera | Layout |
 |---|---|---|---|
 | 320–389 | 20px laterales, min-width 0 | 68px, menú ≥44px | Una columna, CTA ancho disponible, H1 ≤43px |

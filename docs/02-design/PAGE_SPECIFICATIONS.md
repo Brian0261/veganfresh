@@ -1,5 +1,7 @@
 # ENTREGABLE D — Especificaciones de diseño por URL
 
+El layout vigente de las ocho vistas está en [UPGRADE_PAGE_SPECIFICATIONS.md](UPGRADE_PAGE_SPECIFICATIONS.md). Esta versión conserva el contexto editorial de la implementación inicial.
+
 **Contrato:** mockups en `design/mockups/` son la referencia de composición a 1440×900 y 390×844 (captura extendida). Documentación de jerarquía e interacciones prevalece sobre errores de renderizado de las referencias; cualquier diferencia relevante requiere ADR y aprobación.
 
 ## Reglas globales para todas las páginas

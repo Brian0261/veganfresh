@@ -1,6 +1,7 @@
 ---
 import Site from '../../layouts/Site.astro';
-import Art from '../../components/Art.astro';
+import EditorialPhoto from '../../components/EditorialPhoto.astro';
+import EditorialTitle from '../../components/EditorialTitle.astro';
 import Steps from '../../components/Steps.astro';
 import Faq from '../../components/Faq.astro';
 import FinalCta from '../../components/FinalCta.astro';
@@ -14,19 +15,21 @@ const families = [
 const products = ['Papa', 'Cebolla', 'Tomate', 'Limón', 'Palta', 'Plátano', 'Fresa', 'Mango', 'Lechuga', 'Zanahoria', 'Ají amarillo', 'Hierbas aromáticas'];
 ---
 <Site page="productos" breadcrumbs="productos">
-  <section class="interior-hero catalog-hero">
-    <div class="wrap hero-grid">
-      <div class="hero-copy">
-        <p class="eyebrow">Catálogo orientativo · Consultas B2B</p>
-        <h1>{pages.productos.h1}</h1>
-        <p class="lead">Si compras para una empresa en Lima, organiza tu lista de frutas y verduras por productos o familias. Comparte las cantidades, variedades y frecuencia que necesitas para que podamos evaluar tu cotización.</p>
-        <p class="notice">Los productos que se mencionan son ejemplos de consulta. Las variedades, presentaciones, cantidades y disponibilidad se confirman individualmente; esta página no muestra inventario en tiempo real.</p>
-        <div class="actions">
+  <section class="catalog-hero">
+    <div class="wrap">
+      <p class="eyebrow">Catálogo orientativo · Consultas B2B</p>
+      <EditorialTitle title={pages.productos.h1} emphasis="cotizar al por mayor." />
+      <div class="catalog-intro">
+        <div class="hero-copy">
+          <p class="lead">Si compras para una empresa en Lima, organiza tu lista de frutas y verduras por productos o familias. Comparte las cantidades, variedades y frecuencia que necesitas para que podamos evaluar tu cotización.</p>
+          <p class="notice">Los productos que se mencionan son ejemplos de consulta. Las variedades, presentaciones, cantidades y disponibilidad se confirman individualmente; esta página no muestra inventario en tiempo real.</p>
+        </div>
+        <div class="actions catalog-actions">
           <a class="button" href={quote}>Enviar mi lista de productos <span aria-hidden="true">↗</span></a>
           <a class="text-link" href={pages.frutas.path}>Consultar frutas</a>
         </div>
       </div>
-      <div class="art hero-art"><Art type="frutas" eager /></div>
+      <div class="catalog-panorama"><EditorialPhoto name="ingredients-board" sizes="(min-width: 1440px) 1280px, 92vw" eager /></div>
     </div>
   </section>
   <section class="section catalog-families">
@@ -38,13 +41,21 @@ const products = ['Papa', 'Cebolla', 'Tomate', 'Limón', 'Palta', 'Plátano', 'F
       <div class="family-list">
         {families.map(family => (
           <article class="family-row">
-            <h3>{family.title}</h3>
-            <div><p>{family.text}</p>
+            <div>
+              <h3>{family.title}</h3>
+              <p>{family.text}</p>
               {'category' in family && <a class="text-link" href={pages[family.category].path}>{family.link} <span aria-hidden="true">↗</span></a>}
             </div>
-            {'category' in family && <div class="art"><Art type={family.category} /></div>}
+            {'category' in family && <EditorialPhoto name={family.category === 'frutas' ? 'fruits-citrus' : 'leaf-detail'} sizes="(min-width: 1440px) 600px, 46vw" />}
           </article>
         ))}
+        <article class="family-row">
+          <div>
+            <h3>Una misma cotización para tu requerimiento.</h3>
+            <p>No necesitas consultar cada producto por separado. Puedes enviar una lista de frutas y verduras en el formulario empresarial y describir los volúmenes que requiere tu operación.</p>
+          </div>
+          <a class="text-link family-action" href={quote}>Preparar solicitud mayorista <span aria-hidden="true">↗</span></a>
+        </article>
       </div>
     </div>
   </section>
@@ -64,15 +75,6 @@ const products = ['Papa', 'Cebolla', 'Tomate', 'Limón', 'Palta', 'Plátano', 'F
         ['Frecuencia y zona', 'Señala si la compra es puntual o recurrente y para qué distritos necesitas evaluar la atención.'],
         ['Varios locales', 'Si compras para una cadena, indica número de sedes y cualquier requisito particular; la factibilidad se confirmará comercialmente.'],
       ]} />
-    </div>
-  </section>
-  <section class="section">
-    <div class="wrap split">
-      <h2>Una misma cotización para tu requerimiento.</h2>
-      <div>
-        <p>No necesitas consultar cada producto por separado. Puedes enviar una lista de frutas y verduras en el formulario empresarial y describir los volúmenes que requiere tu operación.</p>
-        <div class="actions"><a class="button" href={quote}>Preparar solicitud mayorista <span aria-hidden="true">↗</span></a></div>
-      </div>
     </div>
   </section>
   <Faq items={[

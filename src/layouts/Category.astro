@@ -1,6 +1,7 @@
 ---
 import Site from './Site.astro';
-import Art from '../components/Art.astro';
+import EditorialPhoto from '../components/EditorialPhoto.astro';
+import EditorialTitle from '../components/EditorialTitle.astro';
 import Steps from '../components/Steps.astro';
 import Faq from '../components/Faq.astro';
 import FinalCta from '../components/FinalCta.astro';
@@ -11,39 +12,57 @@ const { page } = Astro.props;
 const content = categories[page];
 const href = `/cotizar/?categoria=${page}`;
 const related = page === 'frutas' ? 'verduras' : 'frutas';
+const fruit = page === 'frutas';
 ---
 <Site page={page} breadcrumbs={page}>
-  <section class="interior-hero">
-    <div class:list={['wrap', 'hero-grid', { reverse: page === 'verduras' }]}>
+  <section class:list={['category-hero', fruit ? 'fruit-hero' : 'vegetable-hero dark']}>
+    <div class:list={['wrap', fruit && 'portrait-grid']}>
       <div class="hero-copy">
         <p class="eyebrow">{pages[page].label} · Compras B2B en Lima</p>
-        <h1>{pages[page].h1}</h1>
-        <p class="lead">{content.intro}</p>
-        <div class="actions"><a class="button" href={href}>{content.cta} <span aria-hidden="true">↗</span></a></div>
+        <EditorialTitle title={pages[page].h1} emphasis="empresas en Lima." opening={fruit ? undefined : 'Verduras al por mayor'} />
+        <div class:list={['category-intro', !fruit && 'action-strip']}>
+          <p class="lead">{content.intro}</p>
+          <div class="actions">
+            <a class:list={['button', !fruit && 'light']} href={href}>{content.cta} <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
       </div>
-      <div class="art hero-art"><Art type={page} eager /></div>
+      <div class={fruit ? 'fruit-portrait' : 'vegetable-panorama'}>
+        <EditorialPhoto name={fruit ? 'fruits-citrus' : 'vegetables-still'}
+          sizes={fruit ? '(min-width: 1440px) 600px, 45vw' : '(min-width: 1440px) 1280px, 92vw'} eager />
+        {!fruit && <p class="photo-caption">Hojas · Raíces y tubérculos · Hortalizas de fruto</p>}
+      </div>
     </div>
   </section>
-  <section class="section category-criteria">
-    <div class:list={['wrap', { split: page === 'verduras' }]}>
-      <h2 class="measure">{content.details}</h2>
-      <Steps items={content.criteria} columns={page === 'frutas'} />
-    </div>
-  </section>
-  <section class="section white">
+  <section class="section">
     <div class="wrap">
       <h2 class="measure">{content.families}</h2>
       <p class="section-intro">{content.familiesIntro}</p>
-      <div class="group-grid">
-        {content.groups.map(([title, text]) => <article><h3>{title}</h3><p>{text}</p></article>)}
-      </div>
+      {fruit ? (
+        <div class="group-grid">
+          {content.groups.map(([title, text]) => <article><h3>{title}</h3><p>{text}</p></article>)}
+        </div>
+      ) : <Steps items={content.groups} editorial />}
       <a class="text-link" href="/productos/">Ver el catálogo orientativo de productos <span aria-hidden="true">↗</span></a>
     </div>
   </section>
-  <section class="sage strip-section">
-    <div class="wrap action-strip">
-      <div><h2>{content.request}</h2><p>{content.requestText}</p></div>
-      <a class="button" href={href}>{content.requestCta} <span aria-hidden="true">↗</span></a>
+  <section class:list={['section category-criteria', fruit ? 'paper-aux' : 'sage']}>
+    <div class:list={['wrap', fruit ? 'split' : 'leaf-feature']}>
+      {!fruit && <EditorialPhoto name="leaf-detail" sizes="(min-width: 1440px) 620px, 46vw" />}
+      <div>
+        <h2>{fruit ? content.details : content.request}</h2>
+        {fruit && <h3 class="category-request">{content.request}</h3>}
+        <p class="section-intro">{content.requestText}</p>
+        {!fruit && <>
+          <h3 class="category-request">{content.details}</h3>
+          <Steps items={content.criteria} />
+        </>}
+        {!fruit && <a class="button" href={href}>{content.requestCta} <span aria-hidden="true">↗</span></a>}
+      </div>
+      {fruit && <div>
+        <Steps items={content.criteria} />
+        <a class="text-link" href={href}>{content.requestCta} <span aria-hidden="true">↗</span></a>
+      </div>}
     </div>
   </section>
   <Faq items={content.faq} />

@@ -8,12 +8,12 @@
 2. Este `AGENTS.md`, `docs/00-project/DECISION_LOG.md` y datos comerciales confirmados.
 3. Arquitectura técnica `docs/05-technical/TECHNICAL_ARCHITECTURE.md` y sitemap **vigente** `docs/03-seo/SITE_ARCHITECTURE.md`.
 4. SEO y navegación: `docs/03-seo/KEYWORD_PAGE_MAPPING.md`, `SEO_REQUIREMENTS.md` y `SEO_STRATEGY.md`.
-5. Texto público por URL `docs/04-content/COPYWRITING.md`, layout `docs/02-design/PAGE_SPECIFICATIONS.md`, diseño/tokens y mockups.
+5. Texto público por URL `docs/04-content/COPYWRITING.md` y dirección visual vigente en `docs/02-design/UPGRADE_PAGE_SPECIFICATIONS.md`, diseño/tokens y mockups.
 6. Detalles internos que Codex elija sin contradecir contrato.
 
 ## Leer según tarea, no todo al mismo tiempo
 
-Punto de entrada `CODEX_START_HERE.md` e índice `manifests/SPECIFICATION_INDEX.md`. Para página, cargar `PAGE_SPECIFICATIONS.md`, `COPYWRITING.md`, `SITE_ARCHITECTURE.md`, y su fila de `manifests/PAGE_ASSET_MAPPING.md`. Para formularios, seguridad y privacidad, cargar los docs de `docs/05-technical/`. Para diseño, ver capturas 1440/390 y `VISUAL_QA.md`.
+Punto de entrada `CODEX_START_HERE.md` e índice `manifests/SPECIFICATION_INDEX.md`. Para página, cargar `UPGRADE_PAGE_SPECIFICATIONS.md`, `COPYWRITING.md`, `SITE_ARCHITECTURE.md` y su fila de `manifests/PAGE_ASSET_MAP.csv`. Para formularios, seguridad y privacidad, cargar los docs de `docs/05-technical/`. Para diseño, ver capturas 1440/390 y `UPGRADE_VISUAL_QA.md`.
 
 ## Scope explícito y prioridades
 
@@ -30,4 +30,4 @@ Astro 7.4.11 base estable sujeta a prueba de compatibilidad, Node.js 24.22.3 LTS
 
 HTML sin JS para contenido SEO, noindex staging, único H1/meta/canonical por URL, sitemap solo páginas autorizadas. Validación servidor, protección anti-spam, idempotencia D1, protección PII, WCAG 2.2 AA, foco accesible y reduced motion. CTA de cotización solo marca éxito tras persistencia real. No seguimiento PII/stock ni analítica sin requisitos de privacidad.
 
-Conservar sistema editorial y assets A; no generar imágenes genéricas ni sustituir dibujos existentes. Comparar páginas P0 con screenshots `design/mockups/` a 1440/390 y también 320/768/1024/1920. Tests y reporte antes de cerrar fase. Si faltan datos, configuración segura y bloqueos documentados; NO fingir pruebas/producción.
+Conservar el logo A y aplicar el rediseño editorial documentado. Se autoriza usar los recortes provisionales de `public/assets/design-upgrade/` en los usos de `manifests/PAGE_ASSET_MAP.csv`. Conservar las ilustraciones históricas y documentar la procedencia. Comparar páginas P0 con screenshots `design/mockups/` a 1440/390 y también 320/768/1024/1920. Tests y reporte antes de cerrar fase. Si faltan datos, configuración segura y bloqueos documentados; NO fingir pruebas/producción.

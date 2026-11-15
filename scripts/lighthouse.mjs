@@ -5,12 +5,13 @@ import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { setTimeout as delay } from 'node:timers/promises';
 import lighthouse from 'lighthouse';
+import { load } from 'cheerio';
 import { gzipSync } from 'node:zlib';
 
 const origin = process.argv[2] || 'http://127.0.0.1:4321';
 const url = new URL(origin);
 if (url.hostname !== '127.0.0.1' || url.protocol !== 'http:') throw new Error('Indica una vista previa HTTP local en 127.0.0.1.');
-const runPaths = ['/', '/productos/', '/frutas-al-por-mayor/', '/verduras-al-por-mayor/', '/proveedor-restaurantes/', '/cotizar/'];
+const runPaths = ['/', '/productos/', '/frutas-al-por-mayor/', '/verduras-al-por-mayor/', '/proveedor-restaurantes/', '/cotizar/', '/privacidad/'];
 const reportDirectory = 'qa/lighthouse';
 await mkdir(reportDirectory, { recursive: true });
 
@@ -41,6 +42,9 @@ try {
       });
       const { lhr } = result;
       await writeFile(join(reportDirectory, `${name}-${run}.json`), result.report);
+      if (lhr.runtimeError) {
+        throw new Error(`Lighthouse en ${path}: ${lhr.runtimeError.code}. ${lhr.runtimeError.message}`);
+      }
       summary.push({
         page: path, run, performance: Math.round(lhr.categories.performance.score * 100),
         accessibility: Math.round(lhr.categories.accessibility.score * 100), seo: Math.round(lhr.categories.seo.score * 100),
@@ -55,7 +59,10 @@ try {
   const weights = await Promise.all([...html.matchAll(/(?:src|href)="(\/_astro\/[^"]+?\.(?:css|js))"/g)].map(async ([, path]) => ({
     file: path, gzipBytes: gzipSync(await readFile('dist' + path)).length,
   })));
-  const hero = await readFile('public/assets/images/hero-editorial-1280.webp');
+  const home = load(await readFile('dist/index.html', 'utf8'));
+  const heroPath = home('main img[fetchpriority="high"]').attr('src');
+  if (!heroPath?.startsWith('/assets/')) throw new Error('No se encontró la imagen principal de la portada.');
+  const hero = await readFile(join('dist', heroPath.slice(1)));
   await writeFile(join(reportDirectory, 'summary.json'), JSON.stringify({ summary, weights, desktopHeroBytes: hero.length }, null, 2) + '\n');
   console.table(summary);
 } finally {

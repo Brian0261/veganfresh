@@ -1,0 +1,74 @@
+{
+  "passed": 17,
+  "total": 17,
+  "results": {
+    "Logo A original SHA coincide con GitHub": {
+      "passed": true,
+      "detail": "6431ea1d1b9e51f3a4ffae106526f67861c6d258"
+    },
+    "Documentos base presentes": {
+      "passed": true,
+      "detail": ""
+    },
+    "8 mockups desktop": {
+      "passed": true,
+      "detail": ""
+    },
+    "8 mockups mobile": {
+      "passed": true,
+      "detail": ""
+    },
+    "8 HTML de referencia": {
+      "passed": true,
+      "detail": ""
+    },
+    "10 vistas ampliadas y storyboards": {
+      "passed": true,
+      "detail": ""
+    },
+    "16 fotos editadas WebP": {
+      "passed": true,
+      "detail": ""
+    },
+    "1 diagrama SVG real": {
+      "passed": true,
+      "detail": ""
+    },
+    "Rutas de assets mapeados reales": {
+      "passed": true,
+      "detail": "12 usos por página"
+    },
+    "48 render checks sin desbordamientos/faltantes/H1": {
+      "passed": true,
+      "detail": ""
+    },
+    "Logo correcto en 8 HTML": {
+      "passed": true,
+      "detail": ""
+    },
+    "No rutas absolutas a contenedor en docs": {
+      "passed": true,
+      "detail": ""
+    },
+    "No fuentes distribuidas": {
+      "passed": true,
+      "detail": ""
+    },
+    "Un solo h1 por referencia": {
+      "passed": true,
+      "detail": ""
+    },
+    "Sitemap referencia exacto": {
+      "passed": true,
+      "detail": ""
+    },
+    "Checksums de recursos correctos": {
+      "passed": true,
+      "detail": ""
+    },
+    "Imágenes PNG y WebP decodifican": {
+      "passed": true,
+      "detail": "32"
+    }
+  }
+}

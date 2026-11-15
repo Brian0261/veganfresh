@@ -1,0 +1,28 @@
+---
+const photos = {
+  'hero-market': { desktop: [1600, 800], mobile: [800, 700], alt: 'Bodegón editorial de frutas y verduras' },
+  'fruits-citrus': { desktop: [1100, 930], mobile: [760, 920], alt: 'Detalle editorial de cítricos' },
+  'vegetables-still': { desktop: [1100, 1380], mobile: [760, 920], alt: 'Bodegón editorial de hortalizas' },
+  'ingredients-board': { desktop: [1440, 860], mobile: [800, 700], alt: 'Bodegón editorial de ingredientes frescos' },
+  'leaf-detail': { desktop: [920, 960], mobile: [760, 920], alt: 'Detalle editorial de hojas verdes' },
+  'greens-texture': { desktop: [1050, 1100], mobile: [760, 920], alt: 'Textura editorial de hojas verdes' },
+} as const;
+
+interface Props {
+  name: keyof typeof photos;
+  sizes: string;
+  eager?: boolean;
+  decorative?: boolean;
+}
+
+const { name, sizes, eager = false, decorative = false } = Astro.props;
+const { desktop, mobile, alt } = photos[name];
+const file = `/assets/design-upgrade/${name}`;
+---
+<picture class="editorial-photo">
+  <source media="(max-width: 767px)" type="image/webp" srcset={`${file}-mobile.webp ${mobile[0]}w`}
+    sizes="calc(100vw - 40px)" width={mobile[0]} height={mobile[1]} />
+  <img src={`${file}.webp`} srcset={`${file}.webp ${desktop[0]}w`} sizes={sizes}
+    alt={decorative ? '' : alt} width={desktop[0]} height={desktop[1]}
+    loading={eager ? 'eager' : 'lazy'} fetchpriority={eager ? 'high' : 'auto'} />
+</picture>

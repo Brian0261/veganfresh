@@ -1,5 +1,7 @@
 # ENTREGABLE B/D — Design system / «Cuaderno de abastecimiento»
 
+Para la composición y medidas vigentes, consultar [UPGRADE_DESIGN_SYSTEM.md](UPGRADE_DESIGN_SYSTEM.md). Los tokens base y criterios de accesibilidad siguen aplicando.
+
 ## Tokens visuales aprobados para propuesta
 
 ```
